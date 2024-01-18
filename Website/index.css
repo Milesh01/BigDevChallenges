@@ -1,4 +1,93 @@
 /* This is an example CSS file, feel free to remove/edit it anytime */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: url("assets/fonts/Raleway-Black.ttf"),url("assets/fonts/Raleway-Medium.ttf");
+}
+.container{
+  width: 100vw;
+}
+.navigation-bar{
+  box-shadow: 0px 0px 15px 0px #000;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-bar{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  
+}
+.nav-bar a{
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px 0 10px;
+  color: #000;
+  transition: all .3s ease-in-out;
+}
+.nav-bar a:hover{
+  color: green;
+}
+
+.food-section-first{
+  width: 100%;
+  display: flex;
+}
+.contect-section{
+  width: 65%;
+  height: 70vh;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  padding: 0 0 0 10%;
+}
+.green-bg{
+  width: 35%;
+  background-color: green;
+  height: 70vh;
+}
+.contect-section .mt-1, .contect-section .check-btn{
+  margin-top: 10px;
+  line-height: 20px;
+}
+.contect-section .check-btn{
+  padding: 7px;
+  background-color: orange;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  font-weight: 800;
+}
+.contect-section .check-btn:hover{
+  box-shadow: 0 0 5px 1px #000;
+}
+.contect-section img{
+  transition: all .3s ease-in-out;
+}
+.check-btn:hover img{
+  margin-left: 10px;
+  transform: rotate(90deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .footer {
   position: absolute;
   bottom: 0;
