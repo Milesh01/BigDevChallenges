@@ -1,9 +1,359 @@
 /* This is an example CSS file, feel free to remove/edit it anytime */
-.footer {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+  padding-top: 6.3%;
+}
+:root{
+  --green-color: green;
+}
+  @font-face {
+    font-family: 'Raleway-Black'; 
+    src: url("assets/fonts/Raleway-Black.ttf") format('ttf'),
+          url("assets/fonts/Raleway-Medium.ttf") format('ttf');
+}
+
+.container{
+  font-family: 'Times New Roman', Times, serif;
+}
+.navigation-bar{
+  box-shadow: 0px 0px 5px 0px #000;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 10000;
+  /* background-color: #bebebe6b; */
+}
+.nav-bar{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.nav-bar a{
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 20px 0 10px;
+  color: #000000;
+  transition: all .2s ease-in-out;
+}
+.nav-bar a:hover{
+  color: orange;
+}
+
+.food-section-first{
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.food-section{
+  width: 78rem;
+  height: 83vh;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  padding: 0 0 0 10%;
+}
+.green-bg{
+  width: 35rem;
+  background-color: var(--green-color);
+  height: 97vh;
+}
+.food-section .mt-1, .food-section .check-btn{
+  margin-top: 10px;
+  line-height: 20px;
+}
+.food-section .check-btn ,.check-btn{
+  padding: 7px;
+  background-color: orange;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  font-weight: 800;
+}
+.food-section .check-btn:hover, .check-btn:hover{
+  box-shadow: 0 0 3px #000;
+  background-color: rgb(241, 158, 3);
+}
+.food-section img{
+  transition: all .3s ease-in-out;
+}
+.food-section h1{
+  font-size: 75px;
+  color: #3a3737;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.food-section p{
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  line-height: 26px;
+  color: rgb(71, 71, 71);
+}
+.check-btn:hover img{
+  transform: rotate(90deg);
+}
+.img-section img{
   position: absolute;
-  bottom: 0;
+  right: 190px;
+  top: 100px;
+}
+.scrolling-words-box {
+	height: 39.4rem;
+	overflow: hidden;
+  position: absolute;
+  right: 390px;
+}
+
+.scrolling-words-box ul {
+	padding: 0;
+	animation: scrollUp 4s infinite;
+	margin: 0
+}
+
+.scrolling-words-box ul li {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	height: 25rem;
+	list-style: none
+}
+
+@keyframes scrollUp {
+	15%,
+	25% {
+		transform: translateY(-3%)
+	}
+
+	40%,
+	50% {
+		transform: translateY(-35%)
+	}
+
+	65%,
+	75% {
+		transform: translateY(-70%)
+	}
+
+	95%,
+	to {
+		transform: translateY(-96%)
+	}
+}
+
+@keyframes foot{
+  0%{
+    transform: rotate(0deg);
+  }
+  80%{
+    opacity: 1;
+  }
+  100%{
+    transform: rotate(390deg);
+    opacity: .4;
+    display: none;
+  }
+}
+.aboutUs-section{
+  position: relative;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.food-left{
+  width: 50%;
+}
+.bg-green-1{
+  background-color: var(--green-color);
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  position: absolute;
+  left: -140px;
+  top: 60px;
+  z-index: -1;
+}
+.about-img img:nth-child(1){
+  position: absolute;
   left: 0;
-  right: 0;
+  top: -50px;
+}
+.about-img img:nth-child(2){
+  position: absolute;
+  top: 100px;
+  left: 60px;
+}
+.about-content{
+  width: 50%;
+}
+
+.about-content h6{
+  font-size: 25px;
+  color: orange;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.about-content h1{
+  font-size: 40px;
+  color: #3a3737;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.about-content p{
+  margin-top: 10px;
+  width: 50%;
+}
+.menu-section{ 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.heading-title{
+  text-align: center;
+}
+.heading-title h1{
+  color: #3a3737;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.heading-title h3{
+  color: orange;
+  font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.main-card{
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  /* background-color: aqua; */
+}
+.main-card .img-menu{
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.main-card .img-menu img{
+  position: absolute;
+  /* left: -40px; */
+  /* top: -30px; */
+  width: 100%;
+  /* height: 60%; */
+  transition: all .4s ease-in-out;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 6px #000);
+}
+.main-card .img-menu img:hover{
+  transform: scale(1.1) rotate(2deg);
+}
+.main-card .card:hover,.main-card .img-menu{
+  overflow: visible;
+}
+.main-card .card{
+  height: 60%;
+  width: 25%;
+  overflow: hidden;
+  border: 2px solid green;
+  box-shadow: 0 0 8px black;
+  border-radius: 10px;
+  margin: 15px;
+  position: relative;
+  transition: all .3s ease-in-out;
+  /* background-color: var(--green-color); */
+  /* border-image: fill 0 linear-gradient(rgb(255, 255, 255), #000); */
+}
+
+.title-menu{
+  position: absolute;
+  text-align: center;
+  margin: 60px auto;
+  bottom: 0px;
+  width: 100%;
+  /* background-color: var(--green-color); */
+}
+.title-menu h3{
+  font-size: 25px;
+  font-family: cursive;
+  font-weight: bolder;
+  color: #000000;
+}
+.title-menu p{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bolder;
+  color: #3a3737;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.title-menu button{
+  position: absolute;
+  right: 10px;
+
+}
+
+.good-food{
+  height: 100vh;
+}
+.happy-clients {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  gap: 10px;
+  overflow: hidden;
+}
+.happy-clients > img{
+  width: 16%;
+  height: 300px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border: 2px solid ;
+  border-radius: 10px;
+  transition: all .3s ease-in-out;
+}
+.happy-clients > img:hover{
+  /* width: 100%; */
+ transform: scale(1.1);
+}
+.good-food h1{
+  padding: 20px;
+}
+.happy-clients img{
+  /* transition: all .3s ease-in-out; */
+}
+.happy-clients img:hover{
+  /* transform: scale(1.1); */
+}
+
+.contect-details{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.card-1{
+  padding:20px 40px;
+  box-shadow: 0 0 10px #000;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer {
+  position: sticky;
+  bottom: 0;
   padding: 10px;
   text-align: center;
 }
@@ -16,4 +366,54 @@
 
 .footer span {
   font-size: 14px;
+}
+
+
+
+
+@media (min-width:576px){
+  .food-section h1{
+    font-size: 50px;
+  }
+.green-bg, .food-section, .aboutUs-section{
+  height: 631px;
+}
+.scrolling-words-box{
+  /* right: 132px; */
+}
+.scrolling-words-box ul li img{
+  width: 300px;
+}
+.about-img img:nth-child(2){
+  width: 300px;
+  top: 125px;
+  left: 105px;
+}
+.bg-green-1{
+  height: 450px;
+  width: 450px;
+}
+.main-card{
+  height: 550px;
+}
+.good-food{
+  height: 480px;
+}
+.contect-details{
+  height: 380px;
+}
+}
+@media (min-width:992px){
+  .scrolling-words-box{
+    /* right: 260px; */
+  }
+  .green-bg, .food-section, .aboutUs-section{
+    height: 554px;
+  }
+}
+@media (min-width:1024px) {
+
+}
+@media (min-width:1200px){
+
 }
