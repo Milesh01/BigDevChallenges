@@ -19,14 +19,12 @@ input[type="text"] {
   margin-bottom: 10px;
   padding: 10px;
   font-size: 18px;
-  border: 1px solid #ccc;
-  border: none;
   outline: none;
   box-sizing: border-box;
+  /* border: 2px solid #8c8b8b; */
   border: none;
-
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.45) inset;
 }
-
 button {
   width: 50px;
   height: 50px;
@@ -53,8 +51,12 @@ button.equals {
 }
 .btn{
     border: none;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.16), 0 8px 8px rgba(0,0,0,0.20);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    transition: all ease-in-out .3s;
+}
+.btn:hover{
+  background-color: #b0b2b3;
 }
 .txt-color{
     color: blue;
@@ -133,7 +135,8 @@ transition: all .5s ease-in-out;
 }
 .night-mode .btn{
 background-color: #292626;
-box-shadow: 0 1px 3px rgba(255, 255, 255, 0.12), 0 1px 2px rgba(255, 255, 255, 0.24);
+border: 1px solid #8c8b8b;
+box-shadow: 0 1px 3px rgba(57, 53, 53, 0.12), 0 1px 2px rgbrgba(39, 38, 38, 0.24);
 color: #fff;
 }
 .night-mode button.equals {
@@ -149,6 +152,9 @@ color: blue;
 .night-mode #calculator , .night-mode input{
 background-color: #292626;
 color: white;
+}
+.night-mode input{
+  border: 1px solid #9e9b9b;
 }
 .night-mode span.svgBtn img{
   filter: invert(100%);
