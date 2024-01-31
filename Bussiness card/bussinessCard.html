@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Bree Serif", serif;
+  font-weight: 600;
+  font-style: normal;
+        }
+        .card{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 60vw;
+            height: 80vh;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+            border-radius: 2rem;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .card .top-card{
+            background-color: green;
+            width: 40%;
+            height: 70%;
+            color: white;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+        .card .buttom-card{
+            background-color: green;
+            margin: 10px 0 0  0;
+            height: 100%;
+            width: 40%;
+            color: white;
+            padding: 10px;
+        }
+        .card .social-links{
+            color: white;
+            /* padding: 10px; */
+            margin-top: 10px;
+        }
+        .social-links a{
+            padding: 6px;
+            color: white;
+        }
+        .imgAmn img{
+            position: absolute;
+            width: 300px;
+            height: 460px;
+            /* z-index: 2; */
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%,-50%);
+            object-fit: cover;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+            border-radius:10px;
+        }
+        .contentD h1{
+            font-size: 50px;
+            z-index: 3;
+            color: black;
+
+        }
+        .contentD{
+            position: absolute;
+            right: 0px;
+            top: 60px;
+            line-height: 21px;
+            width: 40%;
+            overflow: hidden;
+            padding: 10px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .contentD p {
+            margin-top: 15px;
+            font-weight: 300;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .contentD h1:nth-child(1){
+            color: green;
+        }
+        .skills{
+            position: absolute;
+            right:-11px;
+            top: 350px;
+            /* line-height: 24px; */
+            width: 40%;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .skills ul{
+            margin-left: 35px;
+        }
+        .circle-right{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: green;
+            top: -20px;
+            right: -20px;
+        }
+        .squre-box1{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: rgb(178, 194, 178);
+            top: 0px;
+            right: 300px;
+            z-index: -1;
+        }
+        .squre-box2{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: green;
+            bottom: 3px;
+            right: 310px;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        .squre-box3{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: #ffffff;
+            top: 150px;
+            right: 600px;
+        }
+        span.dot::before{
+            content: "";
+            background-color: black;
+            height: 5px;
+            width: 5px;
+            position: absolute;
+            left: 157px;
+            margin-top: 8px;
+            border-radius: 50%;
+        }
+    </style>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="card">
+        <div class="top-card">
+            <div class="email"><i class="fa fa-envelope" aria-hidden="true"></i> Email</span><br>
+            <span>mk@gmail.com</span>
+            </div><br>
+            <div class="email"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> Phone</span><br>
+            (+91) 7828230000
+             </div>
+        </div>
+        <div class="buttom-card">
+            <span>Find On Me</span><br>
+            <div class="social-links">
+            <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="contentD">
+            <h1>MK</h1><br>
+            <h1>Deepak</h1>
+            <br>
+            <p><b>FrontEnd Developer &nbsp;&nbsp; <span class="dot"> Mk And Deepak</span></b></p>
+            <p>Hello, I'm mk, a passionate frontend developer with a keen eye for creating engaging and responsive user interfaces. As a frontend developer, my primary focus is on crafting seamless and visually appealing experiences for users.</p>
+        </div>
+        <div class="imgAmn">
+            <img src="Amn.jpg">
+        </div>
+        <div class="skills">
+            <p><b>Skills :</b></p>
+            <br>
+            <ul>
+                <li>Html</li>
+                <li>Css</li>
+                <li>JavaScript</li>
+                <li>Bootstrap</li>
+                <li>JQuery</li>
+            </ul>
+        </div>
+        <div class="circle-right"></div>
+        <div class="squre-box1"></div>
+       <div class="squre-box2"></div>
+       <div class="squre-box3"></div>
+    </div>
+    
+    <bds/>
+</body>
+</html>
