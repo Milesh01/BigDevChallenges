@@ -1,1 +1,141 @@
+  *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Bree Serif", serif;
+  font-weight: 600;
+  font-style: normal;
+        }
+        .card{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 60vw;
+            height: 80vh;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+            border-radius: 2rem;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .card .top-card{
+            background-color: green;
+            width: 40%;
+            height: 70%;
+            color: white;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+        .card .buttom-card{
+            background-color: green;
+            margin: 10px 0 0  0;
+            height: 100%;
+            width: 40%;
+            color: white;
+            padding: 10px;
+        }
+        .card .social-links{
+            color: white;
+            /* padding: 10px; */
+            margin-top: 10px;
+        }
+        .social-links a{
+            padding: 6px;
+            color: white;
+        }
+        .imgAmn img{
+            position: absolute;
+            width: 300px;
+            height: 460px;
+            /* z-index: 2; */
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%,-50%);
+            object-fit: cover;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+            border-radius:10px;
+        }
+        .contentD h1{
+            font-size: 50px;
+            z-index: 3;
+            color: black;
 
+        }
+        .contentD{
+            position: absolute;
+            right: 0px;
+            top: 60px;
+            line-height: 21px;
+            width: 40%;
+            overflow: hidden;
+            padding: 10px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .contentD p {
+            margin-top: 15px;
+            font-weight: 300;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .contentD h1:nth-child(1){
+            color: green;
+        }
+        .skills{
+            position: absolute;
+            right:-11px;
+            top: 350px;
+            /* line-height: 24px; */
+            width: 40%;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .skills ul{
+            margin-left: 35px;
+        }
+        .circle-right{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: green;
+            top: -20px;
+            right: -20px;
+        }
+        .squre-box1{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: rgb(178, 194, 178);
+            top: 0px;
+            right: 300px;
+            z-index: -1;
+        }
+        .squre-box2{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: green;
+            bottom: 3px;
+            right: 310px;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        .squre-box3{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: #ffffff;
+            top: 150px;
+            right: 600px;
+        }
+        span.dot::before{
+            content: "";
+            background-color: black;
+            height: 5px;
+            width: 5px;
+            position: absolute;
+            left: 157px;
+            margin-top: 8px;
+            border-radius: 50%;
+        }
