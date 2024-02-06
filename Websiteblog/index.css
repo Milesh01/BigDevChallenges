@@ -21,6 +21,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root{
+  --bg-orange: orange;
+  --bg-green: green;
+  --bg-red: red;
+}
 .hero-header{
   padding: .2rem;
   box-shadow: 0 0 5px black;
@@ -80,16 +85,107 @@
   color: #fff;
   font-family: PlayfairDisplay;
 }
+button{
+  color: #fff;
+}
+/* ===========================hero Blog======================================= */
+.hero-blog{
+  margin-top: 80px;
+  border-bottom: 2px solid silver;
+  padding: 0px px;
+}
+.hero-blog h1, .hero-blog span{
+font-family: PlayfairDisplay;
+font-weight: 600;
+}
+.hero-img h6{
+  font-family: PlayfairDisplay;
+  font-weight: 800;
+}
+.hero-blog .hero-img{
+  margin-bottom: 40px;
+}
+.hero-blog .hero-img button,.hero-blog .hero-img h6 {
+  font-family: PlayfairDisplay;
+}
+.hero-blog span{
+  color: #646161;
+}
+.hero-blog .hero-img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.hero-blog .hero-img-1{
+  height: 78.5%;
+  width: 100%;
+  object-fit: cover;
+}
+.hero-blog .hero-img-1 button{
+  background-color: var(--bg-red);
+}
+button.btn-fashion{
+  background-color: orangered;
+  border: none;
+  border-radius: 50px;
+  padding:2px 9px;
+  margin: 15px 0;
+}
+/* ===========================hero Cate======================================= */
+.hero-cate h1{
+  font-family: PlayfairDisplay;
+  font-weight: 700;
+}
+.hero-cate  p{
+  font-family: Mukta-SemiBold;
+  font-weight: 700;
+}
+.hero-cate .capsule-1{
+  height: 300px;
+  width: 200px;
+  border-radius: 100px;
+  border: 10px solid rgb(255, 255, 255);
+  overflow: hidden;
+  position: absolute;
+  left: 80px;
+  top: 20px;
+  z-index: -1;
+}
 
-
-
-
+.capsule-2{
+  height: 210px;
+  width: 210px;
+  border-radius: 200px;
+  border: 10px solid rgb(255, 255, 255);
+  overflow: hidden;
+  position: absolute;
+  left: 80px;
+  top: 220px;
+  z-index: 1;
+}
+.capsule-3{
+  height: 400px;
+  width: 280px;
+  border-radius: 200px;
+  border: 10px solid rgb(255, 255, 255);
+  overflow: hidden;
+  position: absolute;
+  right: 35px;
+  top: 20px;
+}
+.hero-cate .capsule-1 img,.capsule-2 img, .capsule-3 img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.card-flex{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   padding: 10px;
   text-align: center;
 }
