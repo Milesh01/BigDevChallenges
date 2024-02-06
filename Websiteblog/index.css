@@ -1,4 +1,90 @@
-/* This is an example CSS file, feel free to remove/edit it anytime */
+@font-face {
+  font-family: PlayfairDisplay;
+  src: url("assets/fonts/Playfair_Display/PlayfairDisplay-Bold.ttf") format('ttf'),
+}
+@font-face {
+  font-family: Mukta-Light;
+  src: url("assets/fonts/Mukta/Mukta-Light.ttf") format('ttf'),
+}
+@font-face {
+  font-family: Mukta-Regular;
+  src: url("assets/fonts/Mukta/Mukta-Regular.ttf") format('ttf'),
+}
+@font-face {
+  font-family:Mukta-SemiBold;
+  src: url("assets/fonts/Mukta/Mukta-SemiBold.ttf") format('ttf'),
+}
+
+/* ================================Start Css================================================== */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hero-header{
+  padding: .2rem;
+  box-shadow: 0 0 5px black;
+  border-bottom: 1px solid;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  background-color: #fff;
+  z-index: 1;
+}
+.hero-header .hero-rightbar ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1px auto;
+}
+.hero-header ul li{
+  list-style: none;
+  padding: 5px 10px;  
+}
+.hero-header ul li>img{
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  cursor: pointer;
+}
+.hero-section{
+  width: 100%;
+}
+.hero-section img{
+  width: 100%;
+  object-fit: cover;
+}
+.hero-section .aside{
+  position: absolute;
+  left: 200px;
+  top: 180px;
+  width: 500px;
+}
+.hero-section .aside h1{
+  font-family: PlayfairDisplay;
+  font-weight: 900;
+  font-size: 4rem;
+}
+.hero-section .aside p{
+  font-family: PlayfairDisplay;
+  font-weight: 700;
+}
+.hero-section .aside button{
+  background-color: orange;
+  padding: 5px 20px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  color: #fff;
+  font-family: PlayfairDisplay;
+}
+
+
+
+
+
 .footer {
   position: absolute;
   bottom: 0;
