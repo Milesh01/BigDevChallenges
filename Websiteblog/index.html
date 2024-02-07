@@ -132,6 +132,94 @@
           </div>
         </div>
       </section>
+      
+      <section class="hero-social">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="d-flex justify-content-center align-items-center flex-column">
+                <h2 class="disfamily">Follow my lifestyle daily on Instagram and join 100k others</h2>
+                <p class="disfamily">@diwan_ji01 / #thestylelife</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="slider">
+                <div class="slider-container">
+                  <div class="slide">
+                    <img src="assets/images/photo-13.png">
+                    <img src="assets/images/photo-12.png" alt="Image 1">
+                    <img src="assets/images/photo-14.png">
+                    <img src="assets/images/photo-15.png" alt="Image 1">
+                    <img src="assets/images/photo-13.png">
+                    <img src="assets/images/photo-16.png">
+                    <img src="assets/images/photo-12.png" alt="Image 1">
+                    <img src="assets/images/photo-17.png">
+                    <img src="assets/images/photo-14.png">
+                    <img src="assets/images/photo-18.png">
+                    <img src="assets/images/photo-19.png" alt="Image 1">
+                    <img src="assets/images/photo-20.png">
+                    <img src="assets/images/photo-21.png">
+                    <img src="assets/images/photo-22.png" alt="Image 1">
+                    <img src="assets/images/photo-2.png">
+                    <img src="assets/images/photo-3.png">
+                  </div>
+                </div>
+                <div class="prev" onclick="prevSlide()">&#10094;</div>
+                <div class="next" onclick="nextSlide()">&#10095;</div>
+              </div>
+              <!-- <div class="menu">
+                <img src="assets/images/photo-12.png" onclick="showImage(0)">
+                <img src="assets/images/photo-13.png" onclick="showImage(1)">
+                <img src="assets/images/photo-14.png" onclick="showImage(2)">
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="containt-box">
+                <div class="card-box">
+                  <img src="assets/icons/logo.svg">
+                  <p class="pt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit.usandae.
+                    adipisicing elit.usandae.
+                  </p>
+                  <div class="Email-box">
+                    <input type="text" placeholder="Your Email">
+                    <button type="button"> Subscribe</button>
+                  </div>
+                </div>
+                <div class="card-box d-flex justify-content-around">
+                    <span class="disfamily">About</span>
+                    <span class="disfamily">Blog</span>
+                    <span class="disfamily">Contect</span>
+                </div>
+                <div class="search-box">
+                  <input type="text" placeholder="type here..."> <img src="assets/icons/search.svg">
+
+                  <ul class="list-style-none">
+                    <li><img src="assets/icons/facebook.svg"></li>
+                    <li><img src="assets/icons/instagram.svg"></li>
+                    <li><img src="assets/icons/twitter.svg"></li>
+                    <li><img src="assets/icons/mail.svg"></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="hero-bottom">
+              <h6>@thestylelife 2024,All rights reserved</h6>
+              <h6>Privacy Policy &nbsp; &nbsp; &nbsp; Terms Of Service</h6>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   
 
@@ -143,5 +231,36 @@
       |
       <span>Built with ❤️ by [ME]</span>
     </div>
+    <script>
+      let slideIndex = 0;
+      const slides = document.querySelectorAll('.menu img');
+      const totalSlides = slides.length;
+  
+      function showSlide(index) {
+        if (index >= totalSlides) {
+          slideIndex = 0;
+        } else if (index < 0) {
+          slideIndex = totalSlides - 1;
+        }
+  
+        const offset = -slideIndex * 100 + '%';
+        document.querySelector('.slider-container').style.transform = `translateX(${offset})`;
+      }
+  
+      function prevSlide() {
+        slideIndex--;
+        showSlide(slideIndex);
+      }
+  
+      function nextSlide() {
+        slideIndex++;
+        showSlide(slideIndex);
+      }
+  
+      // function showImage(index) {
+      //   slideIndex = index;
+      //   showSlide(slideIndex);
+      // }
+    </script>
   </body>
 </html>
