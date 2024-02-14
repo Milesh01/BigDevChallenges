@@ -1,0 +1,90 @@
+/* Add your CSS here. Utilize Tailwind classes or write custom styles to bring your unique design to life. */
+body {
+    font-family: times new roman;
+  }
+  
+  .img-1 {
+    overflow: hidden;
+    margin: 5px;
+  }
+  
+  .img-1 img {
+    border-radius: 7px;
+    padding: 10px;
+    width: 270px;
+  }
+  
+  .xzoom img {
+    height: 65px;
+    width: 50px;
+    margin: 10px 0px;
+    border: 2px solid gray;
+    border-radius: 7px;
+  }
+  
+  .Show-clothes {
+    background: red;
+    height: 100%;
+    width: 50%;
+  }
+  
+  .main-box {
+      display: flex;
+  }
+  
+  .information .skyblue {
+    color: blue;
+  
+  }
+  
+  .information h1 {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  
+  .information p,
+  h5 {
+    color: gray;
+  }
+  
+  .information span.discount {
+    background-color: skyblue;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 15px;
+  }
+  
+  .information .size h3 {
+    margin: 20px 0px;
+    font-weight: 900;
+  }
+  
+  .information .size span {
+    padding-top: 20px;
+    border: 1px solid gray;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s all ease-in;
+  }
+  
+  .information .size span:hover {
+    background: skyblue;
+  }
+  
+  .information h5 {
+    text-decoration-line: line-through;
+  }
+  
+  button {
+    width: 100%;
+    background-color: #1A76FF;
+    padding: 8px;
+    color: white;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+  button:hover{
+    background: #1154b9;
+  }
