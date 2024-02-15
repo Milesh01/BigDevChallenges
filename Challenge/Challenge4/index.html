@@ -1,0 +1,97 @@
+<html>
+
+    <head>
+        <!-- Our unique tag to identify the solution -->
+        <bds />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BigDevSoon Challenge</title>
+
+        <!-- TailwindCSS for styling. Feel free to integrate other libraries as needed -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Add your external script links here, if any -->
+        <style>
+            .inputField{
+                padding: 10px;
+                border: 1px solid rgb(188, 186, 186);
+                border-radius: 10px;
+                outline: none;
+                width: 100%;
+            }
+            input:focus{
+                outline: none;
+            }
+            .radioButton{
+                margin: 0px 10px;
+            }
+            .Btn{
+                width: 100%;
+                padding: 5px;
+                background-color: rgb(253, 52, 116);
+                border-radius: 10px;
+                color: white;
+                transition: .2s all ease-in;
+            }
+            .Btn:hover{
+                background-color: rgb(239, 28, 95);
+            }
+            .bg-liner{
+                background: rgb(231,0,255);
+background: linear-gradient(0deg, rgba(231,0,255,0.76234243697479) 0%, rgba(0,1,255,1) 100%);
+            }
+            .mainbox{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+            h1{
+                font-size: 30px;
+                font-weight: 700;
+                color: #fff;
+            }
+            .mainbox p {
+                color: #fff;
+            }
+            .text-black{
+                color: black !important;
+            }
+            span{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: rgb(255, 0, 0);
+                box-shadow: 0 0 20px linear-gradient(0deg, rgba(231,0,255,0.76234243697479) 0%, rgba(0,1,255,1) 100%);;
+                
+            }
+        </style>
+    </head>
+
+    <body class="bg-liner">
+        <div class="mainbox">
+        <div class=" p-8 space-y-4  max-w-md md:max-w-lg">
+            <h1>Contect Us</h1>
+            <p>
+                Get in touch us! Wheather you hav question,feedback,or just want to say hello,we're here for you.
+            </p>
+            <br>
+            <br> 
+            <span>loc</span>
+        </div>
+        <div class="bg-white text-gray-800 p-8 space-y-4 shadow rounded-xl max-w-md md:max-w-lg">
+           <p class="text-black"><b>Send A Message</b></p>
+           <input type="text" placeholder="Name" class="inputField" required><br>
+           <input type="Email" placeholder="Email" class="inputField" required><br>
+           <input type="text" placeholder="Phone" class="inputField" required><br>
+           <p class="text-black">Preferred contect method of communication</p>
+           <input type="radio" class="radioButton">Email</radio><input type="radio" class="radioButton" checked>Phone</radio><br>
+           <textarea rows="3" class="inputField" placeholder="Message"></textarea>
+           <br>
+           <br>
+           <button type="button" class="Btn">Submit</button>
+        </div>
+        </div>
+    </body>
+
+    </html>
