@@ -1,0 +1,145 @@
+<html>
+
+    <head>
+        <!-- Our unique tag to identify the solution -->
+        <bds />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BigDevSoon Challenge</title>
+
+        <!-- TailwindCSS for styling. Feel free to integrate other libraries as needed -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Add your external script links here, if any -->
+        <style>
+            body{
+                background-color: orange;
+            }
+            .container{
+                height: 550px;
+                width: 1000px;
+                background-color: #fff;
+                padding: 2rem;
+                display: flex;
+                position: relative;
+                border-radius: 20px;
+                box-shadow: 0 0 10px black;
+            }
+            .w-50{
+                width: 50%;
+            }
+            .d-flex{
+                display: flex;
+                justify-content: center;
+                /* align-items: center; */
+            }
+            .align-items{
+                align-items: center;
+            }
+            .flex-column{
+                flex-direction: column;
+            }
+            label{
+                font-weight: 700;
+            }
+            input, select{
+                padding: .5rem;
+                background-color: rgb(207, 210, 210);
+                outline: none;
+                border-radius: 10px;
+            }
+            select{
+                width: 230px;
+                padding: 10px;
+            }
+            .mt-1{
+                margin-top: 10px;
+            }
+            .btn{
+                width: 47%;
+                padding: 10px;
+                text-align: center;
+                background-color: orange;
+                color: #fff;
+                border-radius: 50px;
+                margin-top: 20px;
+                position: absolute;
+                bottom: 45px;
+            }
+            .DevImg{
+                margin: 20px;
+            }
+            .DevImg img{
+                height: 300px;
+                width: 100%;
+                object-fit: cover;
+                
+            }
+            .subImg{
+                margin: 20px;
+                width: 430px;
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap: 10px;
+            }
+            .subImg img{
+              width: 100%;
+              aspect-ratio: 1/1;
+              object-fit: cover;
+            }
+        </style>
+    </head>
+
+    <body class="d-flex align-items">
+       <div class="container">
+        <div class="w-50">
+            <div class="d-flex flex-column">
+                <label>Check In</label>
+                <input type="date">
+            </div>
+            <div class="d-flex flex-column mt-1">
+                <label>Check Out</label>
+                <input type="date">
+            </div>
+            <div class="flex gap-2 mt-1">
+                <div class="flex flex-col gap-2">
+                    <label>Adults</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label>Children</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="">
+                <button class="btn" type="button">Book a room</button>
+            </div>
+        </div>
+        <div class="w-50 gap-3">
+            <div class="DevImg">
+                <img src="https://assets.architecturaldigest.in/photos/62de7667499ca8eca01447ae/1:1/w_1080,h_1080,c_limit/The%20infinity%20pool%20under%20the%20shade%20of%20a%20mango%20tree.png" alt="">
+            </div>
+            <div class="subImg d-flex">
+                <img src="https://static.leonardo-hotels.com/image/leonardohotelbucharestcitycenter_room_comfortdouble2_2022_4000x2600_7e18f254bc75491965d36cc312e8111f_1200x780_mobile_3.jpeg" alt="">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/473281457.jpg?k=bf5dfaf19efffb5b75ef7da11e8ad1bca51aa1eaa65e25ee367a1eb8d339b4ea&o=&hp=1" alt="">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/473281461.jpg?k=89417682d3040e2457d715ff93ed05f198a02ff67b00610ef8fe90ec59edc959&o=&hp=1" alt="">
+
+            </div>
+        </div>
+       </div>
+        
+    </body>
+
+    </html>
