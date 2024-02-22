@@ -1,0 +1,171 @@
+<html>
+
+    <head>
+        <!-- Our unique tag to identify the solution -->
+        <bds />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BigDevSoon Challenge</title>
+
+        <!-- TailwindCSS for styling. Feel free to integrate other libraries as needed -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Add your external script links here, if any -->
+        <style>
+            .container{
+                height: 550px;
+                width: 1000px;
+                display: flex;
+            }
+            .card-box{
+                padding: 20px;
+                box-shadow: 0 0 10px black;
+                border-radius: 15px;
+                background-color: #fff;
+            }
+            .w-50{
+                width: 50%;
+            }
+            .h-280{
+                height: 300px;
+            }
+            .d-flex{
+                display: flex;
+                justify-content: center;
+                /* align-items: center; */
+            }
+            .align-items{
+                align-items: center;
+            }
+            .flex-column{
+                flex-direction: column;
+            }
+            .mt-1{
+                margin-top: 10px;
+            }
+            .btn{
+                width: 100%;
+                padding: 10px;
+                text-align: center;
+                background-color: rgb(0, 0, 0);
+                color: #fff;
+                border-radius: 10px;
+            }
+            .btn2{
+                width: 100%;
+                padding: 10px;
+                border: 2px solid rgb(227, 227, 227);
+                border-radius: 10px;
+            }
+            .text-center{
+                text-align: center;
+            }
+            input{
+                padding: 10px;
+                outline: none;
+                background-color: rgb(252, 252, 252);
+                border-radius: 5px;
+                transition: all .3s;
+                width: 100%;
+                border: 1px solid blueviolet;
+            }
+            input:hover{
+                border: 1px solid blue;
+            }
+            .position-relative{
+                position: relative;
+            }
+            .lblName{
+                position: absolute;
+                bottom: 12px;
+                transition: all .3s ease-in-out;
+                color: rgb(212, 212, 212);
+                padding: 0px 30px 0;
+            }
+            .inputField:hover .lblName {
+                position: absolute;
+                left: 10px;
+                bottom: 34px;
+                color: black;
+                padding: 0 5px;
+                background-color: #ffffff;
+            }
+            span{
+                font-weight: 500;
+                color: blue;
+            }
+            h1{
+                font-size: 30px;
+            }
+            .icon img{
+                height: 18px;
+                display: inline;
+            }
+        </style>
+    </head>
+
+    <body class="d-flex align-items">
+       <div class="container gap-10">
+            <div class="w-50 p-3 text-center card-box mt-1 h-280">
+                <h1><b>Sign Up</b></h1>
+                <p>
+                    Join us now! Sign up to kick-start your journey.
+                </p>
+                <br>
+                <button class="btn2"><span class="icon">
+                    <img src="https://cdn-icons-png.freepik.com/512/300/300221.png">
+                </span> Sign Up with Google</button>
+                <br>
+                <br>
+                <button class="btn">
+                    <span class="icon" ><img src="https://cdn-icons-png.freepik.com/512/9068/9068642.png"></span>
+                    Sign Up with Email</button>
+                <br>
+                <br>
+                <p>
+                    Already have an account? <span><a href="">Login In</a></span>
+                </p>
+            </div>
+
+            <div class="w-50 p-3 text-center card-box">
+                <h1><b>Sign Up</b></h1>
+                <p>
+                    Join us now! Sign up to kick-start your journey.
+                </p>
+                <br>    
+                    <div class="inputField position-relative">
+                        <label class="lblName">Name</label>
+                    <input type="text" class="">
+                    </div>
+                    <br>
+                    <div class="inputField position-relative">
+                        <label class="lblName">Email</label>
+                    <input type="email" class="">
+                    </div>
+                    <br>
+                    <div class="inputField position-relative">
+                        <label class="lblName">Password</label>
+                    <input type="password" class="">
+                    </div>
+                    <br>
+                <button class="btn">Sign Up</button>
+                <br>
+                <br>
+                <p>
+                    Already have an account? <span><a href="">Login In</a></span>
+                </p>
+                <br>
+                <hr>
+                <br>
+                <button class="btn2">
+                    <span class="icon">
+                        <img src="https://cdn-icons-png.freepik.com/512/300/300221.png">
+                    </span>
+                    Sign Up with Google</button>
+                <br>
+            </div>
+       </div>
+        
+    </body>
+
+    </html>
