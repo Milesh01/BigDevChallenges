@@ -6,6 +6,8 @@
     <script src="index.js" defer></script>
     <title>BigDevSoon - Blog Project</title>
     <link rel="stylesheet" href="assets/framework/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
   </head>
   <body>
     <div class="container-fluid px-0">
@@ -16,7 +18,7 @@
             <div class="hero-rightbar">
               <ul>
                 <li>About</li>
-                <li>Blog</li>
+                <li><a href="blog.html">Blog</a></li>
                 <li>Contect</li>
                 <li>|</li>
                 <li><img src="assets/icons/facebook.svg"></li>
@@ -24,14 +26,18 @@
                 <li><img src="assets/icons/twitter.svg"></li>
                 <li><img src="assets/icons/mail.svg"></li>
                 <li>|</li>
-                <li><img src="assets/icons/search.svg"></li></li>
+                <li id="searchIcon"><img src="assets/icons/search.svg"></li>
+                <div id="searchContainer">
+                  <input type="text" id="searchInput" placeholder="Search...">
+                </div>              
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
 
-      <section class="hero-section">
+      <section class="hero-section" >
         <img src="assets/images/background-image.png">
         <div class="aside">
           <h1>Elevate Life</h1>
@@ -52,7 +58,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 fashion">
               <div class="hero-img">
                 <img src="assets/images/photo-3.png">
                 <div class="d-flex justify-content-between align-items-center">
@@ -84,7 +90,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 fashion">
               <div class="hero-img hero-img-1">
                 <img src="assets/images/photo-17.png">
                 <div class="d-flex justify-content-between align-items-center">
@@ -229,38 +235,17 @@
         >Project by BigDevSoon</a
       >
       |
-      <span>Built with ❤️ by [ME]</span>
+      <span>Built with ❤️ by <a href="https://github.com/Milesh01/" target="_blank">[ME]</a></span>
     </div>
-    <script>
-      let slideIndex = 0;
-      const slides = document.querySelectorAll('.menu img');
-      const totalSlides = slides.length;
-  
-      function showSlide(index) {
-        if (index >= totalSlides) {
-          slideIndex = 0;
-        } else if (index < 0) {
-          slideIndex = totalSlides - 1;
-        }
-  
-        const offset = -slideIndex * 100 + '%';
-        document.querySelector('.slider-container').style.transform = `translateX(${offset})`;
-      }
-  
-      function prevSlide() {
-        slideIndex--;
-        showSlide(slideIndex);
-      }
-  
-      function nextSlide() {
-        slideIndex++;
-        showSlide(slideIndex);
-      }
-  
-      // function showImage(index) {
-      //   slideIndex = index;
-      //   showSlide(slideIndex);
-      // }
-    </script>
+
+
   </body>
+  <script href="assets/js/index.js" defer></script>
+<script href="assets/js/aos.js"></script>
+<script>
+  AOS.init({
+      offset: 120,
+      duration: 1000
+  });
+</script>
 </html>
