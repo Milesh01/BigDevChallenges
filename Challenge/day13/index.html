@@ -1,0 +1,204 @@
+<html>
+
+<head>
+    <!-- Our unique tag to identify the solution -->
+    <bds />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigDevSoon Challenge</title>
+
+    <!-- TailwindCSS for styling. Feel free to integrate other libraries as needed -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Add your external script links here, if any -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .site-img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .light-gray {
+            color: rgb(146, 146, 146);
+        }
+
+        ul {
+            padding-left: 0;
+            width: 100%;
+        }
+
+        .btn {
+            padding: 5px 15px;
+            width: 46%;
+        }
+
+        .bg-Purple {
+            background-color: rgb(91 33 182);
+            color: #fff;
+        }
+
+        .bg-gray {
+            background-color: rgb(197, 197, 197);
+            color: #000;
+        }
+
+        .txt-purple {
+            color: rgb(91 33 182);
+        }
+
+        .app-img {
+            height: 50px;
+            width: 50px;
+            border-radius: 10px;
+            border: 1px solid black;
+            object-fit: cover;
+        }
+
+        .imageAfter::before {
+            content: '';
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            z-index: 2;
+            top: 0px;
+            left: 30px;
+            background-image: url("https://cdn-icons-png.freepik.com/512/3239/3239147.png");
+            background-size: cover;
+        }
+        .imageAfter2::before {
+            content: '';
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            z-index: 2;
+            top: 0px;
+            left: 30px;
+            background-image: url("https://cdn-icons-png.freepik.com/512/9408/9408457.png");
+            background-size: cover;
+        }
+        .bi-download {
+            font-weight: bolder !important;
+
+        }
+
+        .bi-bell,.bi-bell-slash-fill {
+            padding: 10px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 0 0 5px #000000;
+        }
+        .card {
+            box-shadow: 0 0 5px #000000;
+        }
+    </style>
+</head>
+
+<body class="">
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center mt-5">
+            <div class="col-md-4 pt-5">
+                <div class="d-flex justify-content-end mb-3">
+                    <i class="bi bi-bell-slash-fill"></i>
+                </div>
+                <div class="card  p-3">
+                    <div class="d-flex justify-content-between">
+                        <h4>Notification</h4>
+                        <span>Mark As Read</span>
+                    </div>
+                    <p class="text-center mt-3">You Don't Have Any Notification Yet</p>
+                </div>
+            </div>
+            <div class="col-md-4 pt-5">
+                <div class="d-flex justify-content-end mb-3">
+                    <i class="bi bi-bell"></i>
+                </div>
+                <div class="card  p-3">
+                    <div class="d-flex justify-content-between">
+                        <h4>Notification</h4>
+                        <span>Mark As Read</span>
+                    </div>
+                    <div class="mt-4 d-flex justify-content-between">
+                        <ul>
+                            <li class="d-flex align-items-center border-bottom pb-2 position-relative">
+                                <div class="imageAfter">
+                                    <img src="https://avatars.githubusercontent.com/u/152176996?v=4"
+                                        class="site-img me-3 " alt="Logo">
+                                </div>
+                                <span><b>Milesh Kumar </b> Joined to <b>"Design"</b> Group.<br>
+                                    <span class="light-gray">2 min ago.</span></span>
+                            </li>
+                            <li class="d-flex align-items-center border-bottom pb-2 mt-2 position-relative">
+                                <div class="imageAfter2">
+                                    <img src="https://img.freepik.com/premium-photo/portrait-cheerful-little-boy-with-curly-hair-tshirt-smiling-funny-carefree_2221-7628.jpg"
+                                        class="site-img  me-3" alt="Logo">
+                                </div>
+                                <span><b>Riyan</b> mentioned you in <b>comment.</b> Group.<br>
+                                    <span class="light-gray">2 hours ago.</span></span>
+                            </li>
+                            <li class="d-flex  border-bottom pb-2 mt-2 position-relative">
+                                <div class="imageAfter">
+                                    <img src="https://images.pexels.com/photos/2780017/pexels-photo-2780017.jpeg?cs=srgb&dl=pexels-david-kwewum-2780017.jpg&fm=jpg"
+                                        class="site-img  me-3" alt="Logo">
+                                </div>
+                                <span><b>Rakesh</b> send you a <b>Friend request.</b><br>
+                                    <span class="light-gray">2 hours ago.</span><br>
+                                    <ul>
+                                        <li>
+                                            <button type="button" class="btn bg-Purple mt-3">Accept</button>
+                                            <button type="button" class="btn bg-gray mt-3">Delete</button>
+                                        </li>
+                                    </ul>
+                                </span>
+                            </li>
+
+                            <li class="d-flex border-bottom pb-2 mt-2">
+                                <img src="https://img.freepik.com/premium-photo/cute-handsome-anime-boy-blue-light_675932-435.jpg" class="site-img me-3"
+                                    alt="Logo">
+                                <span><b>Saurabh</b> upload 2 attechment<b>"Source".</b><br>
+                                    <span class="light-gray">2 day ago.</span>
+                                    <ul class="border-1 border-black p-2 rounded">
+                                        <li class="d-flex">
+                                            <img src="https://media.idownloadblog.com/wp-content/uploads/2015/05/Photos-App-Icon.jpg"
+                                                class="app-img me-2" alt="">
+                                            <div>
+                                                <span class="light-gray">Techtalk.me</span><br>
+                                                <h6 class="txt-purple">App Generator - The Technology say</h6>
+                                            </div>
+                                        </li>
+                                        <li>Lorem ipsum, dolora quaerat eum iure vitae nihil autem corporis! Voluptatib
+                                        </li>
+                                    </ul>
+                                    <ul class="border-1 border-black p-2 rounded mt-3">
+                                        <li class="d-flex">
+                                            <img src="https://media.idownloadblog.com/wp-content/uploads/2015/05/Photos-App-Icon.jpg"
+                                                class="app-img me-2" alt="">
+                                            <div class="d-flex justify-content-between align-items-center w-full">
+                                                <div>
+                                                    <h6 class="txt-purple">Background Image</h6>
+                                                    <span class="light-gray"> Zip - 1.5GB </span>
+                                                </div>
+                                                <i class="bi bi-download txt-purple"></i>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </span>
+                            </li>
+                            <br>
+                            <button type="button" class="w-full rounded bg-Purple p-2 text-center">See all
+                                notification</button>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+</html>
