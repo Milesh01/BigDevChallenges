@@ -1,0 +1,111 @@
+<html>
+
+    <head>
+        <bds />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BigDevSoon Challenge</title>
+
+        <!-- TailwindCSS for styling. Feel free to integrate other libraries as needed -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        body{
+            font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+        }
+        .txt-color{
+            color: green;
+        }
+        .h-80{
+            height: 90vh;
+        }
+        .bg-gray{
+            background-color: rgb(74, 99, 32);
+        }
+        .bg-plant{
+            background-image: url("https://w7.pngwing.com/pngs/624/558/png-transparent-herbaceous-plant-plant-stem-plant-leaf-branch-plane-trees.png");
+            background-position: center;
+            background-size: cover;
+            z-index: 1;
+        }
+        .bg-whitt{
+            background-color: rgb(255, 255, 255);
+
+        }
+        .invert img{
+            filter: invert(.5);
+        }
+    </style>
+    <body class="">
+        <header class="container-fluid">
+            <div class="row justify-content-between align-items-center p-3 shadow-md">
+                <div class="col-3">
+                    <h4 class="mx-3 txt-color fw-bold">GrowGreen</h4>
+                </div>
+                <div class="col-3">
+                    <ul class="d-flex justify-content-between txt-color">
+                        <li><u>Home</u></li>
+                        <li>Catalog</li>
+                        <li>Blog</li>
+                        <li>Content</li>
+                    </ul>
+                </div>
+                <div class="col-3 d-flex justify-content-end align-items-center" >
+                    <span><i class="bi bi-search"></i></span>
+                    <span><i class="bi bi-person ms-3"></i></span>
+                    <span><i class="bi bi-bag mx-3"></i></span>   
+                </div>
+            </div>
+        </header>
+        <section class="container">
+            <div class="row">
+                <div class="col-md-6 h-80 position-relative">
+                   <div class="h-100 bg-gray m-5 bg-plant">
+                    <div class="position-absolute left-0 top-80">
+                       <span class="txt-color fs-5 invert"> <img src="https://cdn-icons-png.flaticon.com/512/2/2997.png " style="height: 50px; width: 50px;"> </span>
+                    </div>
+                        <div class="position-absolute shadow-md w-50 top-50 bg-white p-2 rounded">
+                            <div class="d-flex">
+                                <img src="https://avatars.githubusercontent.com/u/152176996?v=4" style="height: 50px; width: 50px; border-radius: 50%;">
+                                <div class="d-flex flex-column ps-3">
+                                <span class="fw-bold">Milesh Kumar</span>
+                                <span class="fw-bold">4.8 <i class="bi bi-star-fill text-yellow-400"></i><i class="bi bi-star-fill text-yellow-400"></i><i class="bi bi-star-fill text-yellow-400"></i><i class="bi bi-star-fill text-yellow-400"></i><i class="bi bi-star-fill text-yellow-400"></i></span>
+                                </div>
+                                
+                            </div>
+                            <p>uisquam praesentium itaque saepe ipsamr ratione amet totam aliquam, reprehenderit perspiciatis dicta aiores.</p>
+                        </div>
+                   </div>
+                </div>
+                <div class="col-md-6 txt-color h-80 ">
+                   <div class="h-100 d-flex justify-content-center flex-column">
+                       <h1>Make your</h1>
+                       <h1>home beautiful</h1>
+                       <h1>with plants</h1>
+                    <br>
+                    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores cumque veniam error temporibus at ratione! Rem velit inventore eveniet at quibusdam eum explicabo nisi est! Reiciendis iure dolore voluptatem voluptas.</p>
+                    <div class="d-flex justify-content-around align-items-center">
+                        <div class="d-flex justify-content-center flex-column align-items-center">
+                        <img src="https://images.unsplash.com/photo-1516048015710-7a3b4c86be43?q=80&w=1450&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="shadow-md" style="height: 180px; width: 180px; object-fit: cover;">
+                        <span><i class="bi bi-arrow-right mt-5 fs-5 bg-whitt px-2 rounded shadow-md"></i></span>
+                        </div>
+                        <div class="d-flex justify-content-center flex-column align-items-center">
+                        <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="shadow-md" style="height: 180px; width: 180px; object-fit: cover;">
+                        <span><i class="bi bi-arrow-right mt-5 fs-5 bg-whitt px-2 rounded shadow-md"></i></span>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </section>
+    </body>
+
+    </html>
