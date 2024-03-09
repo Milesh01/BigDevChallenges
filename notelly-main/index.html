@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <bds />
+  <link rel="stylesheet" href="index.css" />
+  <script src="index.js" defer></script>
+  <title>BigDevSoon - Notely Project</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: var(--bg-gray);
+    }
+
+    :root {
+      --bg-gray: rgba(224, 219, 219, 0.768);
+      --bg-voilet: rgba(68, 0, 255, 0.747);
+      --bg-green: rgba(0, 128, 0, 0.63);
+      --bg-orange: rgba(255, 166, 0, 0.733);
+    }
+
+    @font-face {
+      font-family: Robot-SemiBold;
+      src: url("assets/fonts/Roboto-Semibold.ttf") format('ttf'),
+    }
+    @font-face {
+      font-family: Robot-Regular;
+      src: url("assets/fonts/Roboto-Medium.ttf") format('ttf'),
+    }
+
+    .bg-gray {
+      background-color: rgba(239, 239, 239, 0.672);
+    }
+
+    .inpur-search input {
+      border-radius: 7px;
+      padding: 7.2px;
+      border: none;
+      outline: none;
+      background-color: var(--bg-gray);
+    }
+
+
+    .list-style-none {
+      list-style-type: none;
+    }
+
+    .btn {
+      /* border: none; */
+      padding: 5px;
+      color: #000000;
+      padding: 5px 10px;
+    }
+
+    .btn-voilet {
+      background-color: var(--bg-voilet);
+    }
+
+    .btn-green {
+      background-color: var(--bg-green);
+    }
+
+    .btn-orange {
+      background-color: var(--bg-orange);
+    }
+
+    .card {
+      box-shadow: 0 0 3px #000000;
+      border-radius: 15px;
+      height: 100%;
+    }
+
+    .footer {
+      position: relative;
+      bottom: 0;
+    }
+    h4{
+      font-family: "Robot-SemiBold";
+      font-weight: 700;
+    }
+    .navigation li button.active {
+  border-bottom: 2px solid var(--bg-green);
+}
+#checkbox img{
+  width: 22px;
+  cursor: pointer;
+}
+#input{
+  height: 17px;
+  width: 17px;
+  cursor: pointer;
+}
+.popup{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.delete ,.edit{
+  cursor: pointer;
+}
+.line-through {
+  text-decoration: line-through;
+}
+  </style>
+
+</head>
+
+<body>
+  <header class="container-fluid shadow-sm bg-white ">
+    <div class="row justify-content-center align-items-center p-2">
+      <div class="col-md-10">
+        <div class="inpur-search d-flex justify-content-between align-items-center">
+          <input type="text" placeholder="Search" class="ps-3 w-100">
+          <button class="btn btn-sm btn-primary ms-2 px-3 py-2 rounded"> Add</button>
+        </div>
+      </div>
+    </div>
+  </header>
+    <section class="container">
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <h3>Your Notes</h3>
+        </div>
+      </div>
+      <div class="row mt-4 d-flex justify-content-between  align-items-center">
+        <div class="col-md-4">
+          <ul class="d-flex justify-content-between align-items-center  list-style-none navigation">
+            <li><button type="button" class="btn1 active" onclick="filterPosts('all')">ALL</button></li>
+            <li><button type="button" class="btn1" onclick="filterPosts('Personal')">PERSONAL</button></li>
+            <li><button type="button" class="btn1" onclick="filterPosts('Home')">HOME</button></li>
+            <li><button type="button" class="btn1" onclick="filterPosts('Bussiness')">BUSSINESS</button></li>
+          </ul>
+          <hr>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex justify-content-center align-items-center">
+            <span id="checkbox"><img src="assets/icons/checkbox-icon.svg"></span>
+            <span>
+            &nbsp; See only complated notes
+            </span>
+          </div>
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-md-4 mt-4 post all Bussiness">
+        <div class="card h-100 p-3">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <button type="button" class="btn btn-voilet">Bussiness</button>
+            <div class="d-flex w-25 justify-content-between">
+              <span><input type="checkbox" id="input" class="inputcheckbox"></span>
+              <span class="edit"><img src="https://cdn.glitch.global/0c1921b5-f8c2-4cc5-95e6-a497fdd2dc60/edit-icon.svg?v=1709978388891"></span>
+              <span class="delete"><img src="https://cdn.glitch.global/0c1921b5-f8c2-4cc5-95e6-a497fdd2dc60/delete-icon.svg?v=1709978387966"></span>
+            </div>
+          </div>
+          <h4 class="title">Finish The Task On The Board</h4>
+          <p class="description">Lorem ipsum dolor sit amet consectetur adipisici</p><br>
+          <div class="d-flex justify-content-end">
+            <span>23 Aug 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mt-4 post all Home">
+        <div class="card h-100 p-3">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <button type="button" class="btn btn-green">Personal</button>
+            <div class="d-flex w-25 justify-content-between">
+              <span><input type="checkbox" id="input" class="inputcheckbox"></span>
+              <span class="edit"><img src="https://cdn.glitch.global/0c1921b5-f8c2-4cc5-95e6-a497fdd2dc60/edit-icon.svg?v=1709978388891"></span>
+              <span class="delete"><img src="https://cdn.glitch.global/0c1921b5-f8c2-4cc5-95e6-a497fdd2dc60/delete-icon.svg?v=1709978387966"></span>
+            </div>
+          </div>
+          <h4 class="title">
+            But a new cup tea
+          </h4>
+          <p class="description">Lorem ipsum dolor sit amet consectetur adipisici</p><br>
+          <div class="d-flex justify-content-end">
+            <span>26 Aug 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mt-4 post all Personal">
+        <div class="card h-100 p-3">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <button type="button" class="btn btn-orange">Home</button>
+            <div class="d-flex w-25 justify-content-between">
+              <span><input type="checkbox" id="input" class="inputcheckbox"></span>
+              <span class="edit"><img src="https://cdn.glitch.global/0c1921b5-f8c2-4cc5-95e6-a497fdd2dc60/edit-icon.svg?v=1709978388891"></span>
+              <span class="delete"><img src="https://cdn.glitch.global/0c1921b5-f8c2-4cc5-95e6-a497fdd2dc60/delete-icon.svg?v=1709978387966"></span>
+            </div>
+          </div>
+          <h4 class="title">Hug out with marry</h4>
+          <p class="description">Lorem ipsum dolor sit amet consectetur adipisici mk is a good boy </p><br>
+          <div class="d-flex justify-content-end">
+            <span>23 Aug 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mt-4 post all Bussiness">
+        <div class="card h-100 p-3">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <button type="button" class="btn btn-voilet">Bussiness</button>
+            <div class="d-flex w-25 justify-content-between">
+              <span><input type="checkbox" id="input" class="inputcheckbox"></span>
+              <span class="edit"><img src="https://cdn.glitch.global/0c1921b5-f8c2-4cc5-95e6-a497fdd2dc60/edit-icon.svg?v=1709978388891"></span>
+              <span class="delete"><img src="https://cdn.glitch.global/0c1921b5-f8c2-4cc5-95e6-a497fdd2dc60/delete-icon.svg?v=1709978387966"></span>
+            </div>
+          </div>
+          <h4 class="title">Bussiness Meeting</h4>
+          <p class="description">Lorem ipsum dolor sit amet consectetur adipisici</p><br>
+          <div class="d-flex justify-content-end">
+            <span>26 Aug 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mt-4 post all Home">
+        <div class="card h-100 p-3">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <button type="button" class="btn btn-green">Personal</button>
+            <div class="d-flex w-25 justify-content-between">
+              <span><input type="checkbox" id="input" class="inputcheckbox"></span>
+              <span class="edit"><img src="https://cdn.glitch.global/0c1921b5-f8c2-4cc5-95e6-a497fdd2dc60/edit-icon.svg?v=1709978388891"></span>
+              <span class="delete"><img src="https://cdn.glitch.global/0c1921b5-f8c2-4cc5-95e6-a497fdd2dc60/delete-icon.svg?v=1709978387966"></span>
+            </div>
+          </div>
+          <h4 class="title">
+            Bake a birthday cake
+          </h4>
+          <p class="description">Lorem ipsum dolor sit amet consectetur adipisici</p><br>
+          <div class="d-flex justify-content-end">
+            <span>27 Aug 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mt-4 post all Personal">
+        <div class="card h-100 p-3">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <button type="button" class="btn btn-orange">Home</button>
+            <div class="d-flex w-25 justify-content-between">
+              <span><input type="checkbox" id="input" class="inputcheckbox"></span>
+              <span class="edit"><img src="https://cdn.glitch.global/0c1921b5-f8c2-4cc5-95e6-a497fdd2dc60/edit-icon.svg?v=1709978388891"></span>
+              <span class="delete"><img src="https://cdn.glitch.global/0c1921b5-f8c2-4cc5-95e6-a497fdd2dc60/delete-icon.svg?v=1709978387966"></span>
+            </div>
+          </div>
+          <h4 class="title">Sign up for spanish course</h4>
+          <p class="description">Lorem ipsum dolor sit amet consectetur adipisici mk is a good boy </p><br>
+          <div class="d-flex justify-content-end">
+            <span>28 Aug 2024</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mt-4 post all Personal">
+        <div class="card h-100 p-3">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <button type="button" class="btn btn-orange category">Home</button>
+            <div class="d-flex w-25 justify-content-between">
+              <span><input type="checkbox" class="inputcheckbox"></span>
+              <span class="edit"><img src="https://cdn.glitch.global/0c1921b5-f8c2-4cc5-95e6-a497fdd2dc60/edit-icon.svg?v=1709978388891"></span>
+              <span class="delete"><img src="https://cdn.glitch.global/0c1921b5-f8c2-4cc5-95e6-a497fdd2dc60/delete-icon.svg?v=1709978387966"></span>
+            </div>
+          </div>
+          <h4 class="title">Sign up for spanish course</h4>
+          <p class="description">Lorem ipsum dolor sit amet consectetur adipisici mk is a good boy </p><br>
+          <div class="d-flex justify-content-end">
+            <span class="date">28 Aug 2024</span>
+          </div>
+        </div>
+      </div>
+      
+      <div id="editPopup" class="popup col-md-5">
+        <div class="popup-content card p-3">
+          <div class="row">
+            <div class="col-md-12 d-flex justify-content-between">
+              <h2 rounded>Edit Post</h4>
+          <span class="close">&times;</span>
+          
+              </div>
+            </div>
+          <form id="editForm">
+            <div class="row justify-content-between">
+            <div class="col-md-6 mt-2">
+            <label for="editTitle"><b>Title</b></label>
+            <input type="text" class="w-100 shadow-sm p-2 rounded" id="editTitle" placeholder="Title">
+            </div>
+            <div class="col-md-6 mt-2">
+            <label for="editCategory"><b>Category</b></label>
+            <input type="text" class="w-100 shadow-sm p-2 rounded" id="editCategory" placeholder="Category">
+            </div>
+            <div class="col-md-12 mt-2">
+            <label for="editDescription"><b>Description</b></label>
+            <textarea id="editDescription" class="w-100 shadow-sm p-2 rounded" placeholder="Description"></textarea>
+            </div>
+            <div class="col-md-12">
+            <div class="d-flex justify-content-end mt-3 gap-2">
+              <button type="button" id="cancelEdit" class="btn btn-danger">Cancel</button>
+              <button type="button" id="saveEdit" class="btn btn-green">Edit</button>
+            </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+<!-- <script src="index.js"></script  > -->
+  <div class="footer">
+    <a href="https://bigdevsoon.me" target="_blank" rel="noopener noreferrer">Project by BigDevSoon</a>
+    |
+    <span>Built with ❤️ by <a href="https://github.com/Milesh01">[Milesh]</span>
+  </div>
+</body>
+
+</html>
