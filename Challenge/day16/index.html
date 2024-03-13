@@ -1,0 +1,123 @@
+<html>
+
+    <head>
+        <!-- Our unique tag to identify the solution -->
+        <bds />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BigDevSoon Challenge</title>
+
+        <!-- TailwindCSS for styling. Feel free to integrate other libraries as needed -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    /* CSS styles */
+    .player-container {
+      width: 640px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover {
+      color: #ff0000;
+    }
+    .playlist-item {
+      cursor: pointer;
+      padding: 8px;
+      transition: background-color 0.3s;
+    }
+    .playlist-item:hover {
+      background-color: rgba(255, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+    <div class="container ">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-8 h-[100]">
+                <div class="card">
+                <div class="player-container h-[500]">
+                    <video id="video-player" controls poster="https://via.placeholder.com/640x360">
+                      <source src="" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="controls">
+                      <button id="play-pause-btn">Play</button>
+                      <!-- <input id="volume-slider" type="range" min="0" max="1" step="0.1" value="1"> -->
+                    </div>
+                  </div>
+                  </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                <ul class="playlist d-flex flex-column " id="playlist">
+                    <li class="playlist-item h-100" data-src="https://youtu.be/FLirGeqJ4gs?si=Gtei9ZZ2b8oqsXJ3">
+                        <video id="video-player" controls poster="">
+                            <source src="https://youtu.be/FLirGeqJ4gs?si=YPyNt95JH5921cuG" type="video/mp4">
+                          </video>
+                        Video 1</li>
+                    <li class="playlist-item h-100" data-src="https://youtu.be/uVRs6TFb0OU?si=ZevL1yAUS9v3PZhj">Video 2</li>
+                    <li class="playlist-item h-100" data-src="https://www.youtube.com/live/_uCd_cgDLUU?si=cDPcTYyMkeUK8FkG">Video 3</li>
+                  </ul>
+                  </div>
+            </div>
+        </div>
+    </div>
+ 
+ 
+
+  <script>
+    // JavaScript functionality
+    const videoPlayer = document.getElementById('video-player');
+    const playPauseBtn = document.getElementById('play-pause-btn');
+    const volumeSlider = document.getElementById('volume-slider');
+    const playlistItems = document.querySelectorAll('.playlist-item');
+
+    // Play default video when page loads
+    window.addEventListener('load', function() {
+      const defaultVideo = document.querySelector('.playlist-item');
+      const defaultVideoSource = defaultVideo.getAttribute('data-src');
+      videoPlayer.src = defaultVideoSource;
+      videoPlayer.play();
+      playPauseBtn.textContent = 'Pause';
+    });
+
+    // Play video when playlist item is clicked
+    playlistItems.forEach(item => {
+      item.addEventListener('click', function() {
+        playlistItems.forEach(item => {
+          item.style.backgroundColor = '';
+        });
+        this.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
+        const videoSource = this.getAttribute('data-src');
+        videoPlayer.src = videoSource;
+        videoPlayer.play();
+        playPauseBtn.textContent = 'Pause';
+      });
+    });
+
+    // Play/pause button functionality
+    playPauseBtn.addEventListener('click', function() {
+      if (videoPlayer.paused || videoPlayer.ended) {
+        videoPlayer.play();
+        playPauseBtn.textContent = 'Pause';
+      } else {
+        videoPlayer.pause();
+        playPauseBtn.textContent = 'Play';
+      }
+    });
+
+    // Volume slider functionality
+    volumeSlider.addEventListener('input', function() {
+      videoPlayer.volume = volumeSlider.value;
+    });
+  </script>
+</body>
+</html>
