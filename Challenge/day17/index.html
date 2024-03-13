@@ -1,0 +1,129 @@
+<html>
+
+    <head>
+        <!-- Our unique tag to identify the solution -->
+        <bds />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BigDevSoon Challenge</title>
+
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Add your external script links here, if any -->
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body class="bg-slate-200 d-flex justify-content-center align-items-center">
+        <div class="">
+            <div class="p-5 rounded bg-white">
+                <div class="row justify-content-between">
+                    <div class="col-md-5">
+                        <div class="card p-3 shadow border-none">
+                            <div class="">
+                                <h5 class="text-black">Balance</h5>
+                                <h2 class="text-black">$ 10,234<span class="text-slate-400">.40</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card p-3 bg-black shadow">
+                            <div class="">
+                                <h5 class="text-white">Panding</h5>
+                                <h2 class="text-white">$ 10,234<span class="text-slate-400">.40</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <div class=" d-flex justify-content-between align-items-center">
+                            <div class="">
+                                <h5>Invoices</h5>
+                            </div>
+                            <div class="w-full d-flex justify-content-end align-items-center">
+                                <div class="bg-slate-800 w-25">
+                                    <select id="cars" class="w-full p-2 outline rounded" onchange="filterPosts(this.value)">
+                                        <option value="All" class="mx-1 px-2 rounded transition-all selected">All</option>
+                                        <option value="Paid" class="mx-1 px-2 rounded transition-all">Paid</option>
+                                        <option value="OutStanding" class="mx-1 px-2 rounded transition-all">OutStanding
+                                        </option>
+                                        <option value="OverDue" class="mx-1 px-2 rounded transition-all">OverDue</option>
+                                    </select>
+                                </div>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <div class="w-25">
+                                <button type="button" onclick="alert('Sorry Not Add Invoice')"
+                                    class="btn bg-primary text-white">+ New Invoices</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <table class="table border-none table-striped">
+                            <thead class="">
+                                <tr class="hover:bg-violet-600 border-none">
+                                    <th scope="col"><input type="checkbox" id="masterCheckbox"></th>
+                                    <th scope="col" class="text-gray-400 font-medium uppercase">Invoice</th>
+                                    <th scope="col" class="text-gray-400 font-medium uppercase">Client</th>
+                                    <th scope="col" class="text-gray-400 font-medium uppercase">Amount</th>
+                                    <th scope="col" class="text-gray-400 font-medium uppercase">Stutes</th>
+                                    <th scope="col" class="text-gray-400 font-medium uppercase">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="post All Paid">
+                                    <th scope="col" class=""><input type="checkbox" class="slaveCheckbox"></th>
+                                    <td class="font-bold ">#Rpr-Dhani</td>
+                                    <td>Sanu rpr</td>
+                                    <td class="font-bold">$3,300,98</td>
+                                    <td><span class="bg-emerald-800 px-3 py-1 rounded text-white">Paid</span></td>
+                                    <td class="font-bold">24 Febuary 2024</td>
+                                </tr>
+                                <tr class="post All Paid">
+                                    <th scope="col"><input type="checkbox" class="slaveCheckbox"></th>
+                                    <td class="font-bold">#Kwd-Adarsh</td>
+                                    <td>Milesh Kumar</td>
+                                    <td class="font-bold">$1,300,98</td>
+                                    <td><span class="bg-emerald-800 px-3 py-1 rounded text-white">Paid</span></td>
+                                    <td class="font-bold">24 January 2025</td>
+                                </tr>
+                                <tr class="post All OutStanding">
+                                    <th scope="col"><input type="checkbox" class="slaveCheckbox"></th>
+                                    <td class="font-bold">#Bb-6</td>
+                                    <td>Paretin </td>
+                                    <td class="font-bold">$6,300,98</td>
+                                    <td><span class="bg-amber-400 px-3 py-1 rounded text-white">OutStanding</span></td>
+                                    <td class="font-bold">28 Dec 2025</td>
+                                </tr>
+                                <tr class="post All OverDue">
+                                    <th scope="col"><input type="checkbox" class="slaveCheckbox"></th>
+                                    <td class="font-bold">#Saurabh-Ram</td>
+                                    <td>Sk Vijay</td>
+                                    <td class="font-bold">$9,300,98</td>
+                                    <td><span class="bg-danger px-3 py-1 rounded text-white">OverDue</span></td>
+                                    <td class="font-bold">24 Feb 2025</td>
+                                </tr>
+                                <tr class="post All OverDue">
+                                    <th scope="col"><input type="checkbox" class="slaveCheckbox"></th>
+                                    <td class="font-bold">#Sanu-sk</td>
+                                    <td>MMb-news</td>
+                                    <td class="font-bold">$3,700,98</td>
+                                    <td><span class="bg-danger px-3 py-1 rounded text-white">OverDue</span></td>
+                                    <td class="font-bold">01 Feb 2025</td>
+                                </tr>
+                            </tbody>
+                        </table>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+<script src="script.js"></script>
+    </html>
