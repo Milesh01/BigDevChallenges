@@ -1,0 +1,25 @@
+.color-picker-container {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    margin-top: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  .color-picker-container input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    
+  }
+  .color-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
