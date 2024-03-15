@@ -1,0 +1,161 @@
+<html>
+
+    <head>
+        <!-- Our unique tag to identify the solution -->
+        <bds />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BigDevSoon Challenge</title>
+
+        <!-- TailwindCSS for styling. Feel free to integrate other libraries as needed -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Add your external script links here, if any -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    </head>
+    <style>
+  .color-picker-container {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    margin-top: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  .color-picker-container input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    
+  }
+  .color-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+    </style>
+    <body class="">
+        <div class="container">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-md-6">
+                    <div class="card shadow-lg">
+                        <div class="card-header">
+                     <h3 class="font-sans">  Brand Colors</h3>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text text-gray-500">Set up your brand color to personalize the.</p>
+                          <div class="d-flex justify-content-start align-items-center">
+                            <div class="color-picker-container">
+                                <input type="color" id="colorPicker" name="colorPicker">
+                                <div class="color-box" id="colorBox"></div>
+                              </div>
+                              &nbsp;&nbsp; <span id="colorCode" class="mt-2 p-2 bg-gray-600 text-white rounded">#000000</span>
+                        </div>
+                      </div>
+                      <div class="card-body bg-gray-300 mt-5 ">
+                        <div class="row">
+                          <div class="col-md-6">
+                              <div class="card card-1">
+                                  <div class="card-header px-0">
+                                      <div class="d-flex p-1 justify-content-center align-items-center">
+                                          <div alt="" class="h-[40] w-[60]  rounded-full border bg-white"></div> &nbsp;&nbsp;
+                                          <span id="color1" class="p-1 w-100 h-[20] bg-gray-800 rounded"></span>&nbsp;&nbsp;
+                                          <span class=" fw-bold fs-2" id="close"> &times;</span>
+                                      </div>
+                                  </div>
+                                  <br>
+                                  <div class="p-1 pb-5">
+                                  <div class="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
+                                      <div class="animate-pulse flex space-x-4">
+                                        <div class="rounded-full bg-slate-700 h-10 w-10"></div>
+                                        <div class="flex-1 space-y-6 py-1">
+                                          <div class="h-2 bg-slate-700 rounded"></div>
+                                          <div class="space-y-3">
+                                            <div class="grid grid-cols-3 gap-4">
+                                              <div class="h-2 bg-slate-700 rounded col-span-2"></div>
+                                              <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                                            </div>
+                                            <div class="h-2 bg-slate-700 rounded"></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    </div>
+                                  
+                                  <div class="d-flex p-1 mt-5 border-bottom border">
+                                      
+                                      <span class="m-2 w-100 h-[30] bg-gray-800 rounded" id="colorPic1"></span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="card card-2">
+                                  <div class="card-header px-0">
+                                      <div class="d-flex p-1  align-items-center">
+                                          <div alt="" class="h-[40] w-[60]  rounded-full border bg-white"></div> &nbsp;&nbsp;
+                                          <span id="color1" class="p-1 w-100 h-[20] bg-gray-800 rounded"></span>&nbsp;&nbsp;
+                                          <span class="fw-bold fs-2" id="close2"> &times;</span>
+                                      </div>
+                                  </div>
+                                  <br>
+                                  <div class="p-1 pb-4">
+                                    <div class=" d-flex justify-content-center align-items-center flex-column">
+                                        <div class="bg-gray-300 rounded-full border-1">
+                                            <i class="bi bi-check-circle text-7xl"></i>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-center align-items-center flex-column">
+                                        <span class="my-2 w-[100] h-[20] bg-gray-400 rounded"></span>
+                                        <span class="my-2 w-[200] h-[20] bg-gray-900 rounded" id="colorPic3"></span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                  
+                                  <div class="d-flex p-1 mt-5  border-bottom border w-100 justify-content-around">
+                                      <span class="my-2 w-[100] h-[30] bg-gray-300 rounded"></span>
+                                      <span class="my-2 w-[100] h-[30] bg-gray-800 rounded" id="colorPic2"></span>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+       
+    </body>
+    <script>
+         const colorPicker = document.getElementById('colorPicker');
+  const colorBox = document.getElementById('colorBox');
+  const colorCode = document.getElementById('colorCode');
+  const colorPic1 = document.getElementById('colorPic1');
+  const colorPic2 = document.getElementById('colorPic2');
+  const colorPic3 = document.getElementById('colorPic3');
+  const closeButton = document.getElementById('close');
+  const closeButton2 = document.getElementById('close2');
+
+  colorPicker.addEventListener('input', (event) => {
+    const selectedColor = event.target.value;
+    colorBox.style.backgroundColor = selectedColor;
+    colorCode.textContent = selectedColor.toUpperCase();
+    colorPic1.style.backgroundColor = selectedColor;
+    colorPic2.style.backgroundColor = selectedColor;
+    colorPic3.style.backgroundColor = selectedColor;
+  });
+  closeButton.addEventListener('click', () => {
+    const colorPickerContainer = document.querySelector('.card-1');
+    colorPickerContainer.style.display = 'none';
+  });
+  closeButton2.addEventListener('click', () => {
+    const colorPickerContainer = document.querySelector('.card-2');
+    colorPickerContainer.style.display = 'none';
+  });
+      </script>
+      
+    </html>
