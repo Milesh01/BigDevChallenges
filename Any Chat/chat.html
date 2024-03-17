@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <bds />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <title>Any Chat Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .shadow-m{
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+        }
+        @font-face {
+        font-family: 'PoppinsBold';
+        src: url('/assets/fonts/Poppins-ExtraBold.ttf') format(ttf);
+      }
+      :root{
+        --fw-popbold: 'PoppinsBold';
+      }
+      .body{
+        font-family: var(--fw-popbold);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row justify-content-center align-items-center" style="height: 100vh;">
+        <div class="col-md-5 d-flex justify-content-center align-items-center shadow-m rounded">
+         <div class="p-5  h-[600] w-100 text-center">
+          <h1 class="text-3xl font-bold text-indigo-600">Please enter your nickname and join chat</h1>
+          <input type="text" placeholder="Enter Your Nick name:" class=" my-3 p-2 border-2 border-indigo-600 rounded w-100 outline-indigo-600 text-indigo-600 font-bold"><br>
+          <button class="border-none bg-indigo-700 px-3 py-2 rounded mt-2 text-white hover:bg-indigo-600" id="startBtn">Join Chat</button>
+         </div>
+        </div>    
+    </div>
+    
+    <div class="footer">
+      <a href="https://bigdevsoon.me" target="_blank" rel="noopener noreferrer"
+        >Project by BigDevSoon</a > |
+      <span>Built with ❤️ by <a href="https://github.com/Milesh01">[Milesh]</a></span>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
