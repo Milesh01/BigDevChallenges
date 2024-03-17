@@ -4,18 +4,50 @@
     <bds />
     <link rel="stylesheet" href="index.css" />
     <script src="index.js" defer></script>
-    <title>BigDevSoon - Any Chat Project</title>
+    <title>Any Chat Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      @font-face {
+        font-family: 'PoppinsBold';
+        src: url('/assets/fonts/Poppins-Regular.ttf') format(ttf);
+      }
+      :root{
+        --fw-popbold: 'PoppinsBold';
+      }
+      .fw-popbold{
+        /* font-family: var(--fw-popbold); */
+      }
+    </style>
   </head>
   <body>
-    <!-- Place below is for your own exciting code -->
-    <p>Time to write some code! 👀</p>
-    <!-- Change the [ME] part to your own name/GitHub link -->
+    <div class="container-fluid">
+      <div class="row" style="height: 100vh;">
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+         <div class="">
+          <h1 class="text-6xl fw-popbold font-bold">Chat <br> anywhere<br>with anyone</h1>
+          <button class="border-none bg-indigo-700 px-3 py-2 rounded mt-2 text-white" id="startBtn">Get Start</button>
+         </div>
+        </div>
+        <div class="col-md-6">
+          <div class="">
+            <img src="https://img.freepik.com/free-vector/users-with-speech-bubbles-vector_53876-82250.jpg" id="imgId" loading="lazy" style="filter: drop-shadow(0 0 5px black);">
+          </div>
+        </div>
+      </div>
+      <div class="row h-100 d-flex justify-content-center align-items-center">
+        <div class="col-md-5">
+          <div class="card">
+            <h1></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <div class="footer">
       <a href="https://bigdevsoon.me" target="_blank" rel="noopener noreferrer"
-        >Project by BigDevSoon</a
-      >
-      |
-      <span>Built with ❤️ by [ME]</span>
+        >Project by BigDevSoon</a > |
+      <span>Built with ❤️ by <a href="https://github.com/Milesh01">[Milesh]</a></span>
     </div>
   </body>
 </html>
