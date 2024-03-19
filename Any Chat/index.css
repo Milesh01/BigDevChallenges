@@ -17,3 +17,13 @@
 .footer span {
   font-size: 14px;
 }
+
+#mydata li{
+  border-radius: 10px 20px;
+  background-color: rgba(9, 9, 214, 0.829);
+  padding: 5px 15px;
+  width: 10%;
+  color: white;
+  font-weight: 600;
+  list-style-type: none;
+}
