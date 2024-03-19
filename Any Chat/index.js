@@ -5,3 +5,9 @@ document.getElementById('startBtn').addEventListener('click',()=>{
   imgId.style.opacity = '0';
   window.location.href = "chat.html";
 })
+
+const startBtn = document.getElementById("startBtn");
+startBtn.addEventListener('click', ()=>{
+  alert('hhh')
+  window.location.href = 'chatBox.html';
+})
