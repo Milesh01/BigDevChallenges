@@ -8,6 +8,9 @@ document.getElementById('startBtn').addEventListener('click',()=>{
 
 const startBtn = document.getElementById("startBtn");
 startBtn.addEventListener('click', ()=>{
-  alert('hhh')
   window.location.href = 'chatBox.html';
 })
+
+
+// ==============inputfield===============
+
