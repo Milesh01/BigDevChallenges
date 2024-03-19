@@ -21,13 +21,14 @@
             </div>
             <div class="row">             
                 <div class="col-md-12 p-4">
-                    <div class="card p-3 rounded bg-white position-relative overflow-y-scroll" style="height: 90vh;">
+                    <div class="card p-3 rounded bg-white position-relative" style="height: 78vh;">
                         <div id="mydata" >
                             <li>mk ji </li>
                         </div>  
-                        <div class="position-fixed bg-indigo-700 d-flex" style="bottom: 10px; left: 20px; right: 30px;">
-                            <input type="text" placeholder="Send Message" id="input-box" class="w-100 rounded outline-indigo-600 p-2 text-gray-600 border-indigo-600 border-2 ">
-                            <button id="submitBtn" class="p-2 text-white font-bold rounded-full d-flex justify-content-center align-items-center"><img src="assets/icons/send-message-icon.svg" class="pe-2 text-white">Send</button>
+                        <div class="position-absolute p-3 bg-gray-400 d-flex w-100" style="bottom: 0px; left: 0px; right: 0px;">
+                            <img src="assets/icons/emoji-icon.svg" id="emojiIcon" onclick="simulateShortcut()"> &nbsp; &nbsp;
+                            <input type="text" placeholder="Send a message..." id="input-box" class="w-100 rounded-full outline-indigo-600 p-2 text-gray-600 border-indigo-600 border-2 ">
+                            <button id="submitBtn" class="p-2 text-white font-bold rounded-full d-flex justify-content-center align-items-center"><img src="assets/icons/send-message-icon.svg" class="text-white p-2 bg-gray-500 rounded-full"></button>
                         </div>
                     </div>
                 </div>
