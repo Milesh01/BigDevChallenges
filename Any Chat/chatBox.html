@@ -7,6 +7,7 @@
     <title>Any Chat Project</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
     </head>
     <body class="bg-gray-200">
         <div class="container-fluid">
@@ -21,16 +22,52 @@
             <div class="row">             
                 <div class="col-md-12 p-4">
                     <div class="card p-3 rounded bg-white position-relative" style="height: 78vh;">
-                        <label id="showsmsLabel" for="showsms" class="text-white font-bold p-2 rounded-full bg-indigo-700 w-20 d-flex justify-content-center align-items-center"></label>
+                        <div id="mydata" >
+                            <li>mk ji </li>
+                        </div>  
                         <div class="position-absolute bg-indigo-700 d-flex" style="bottom: 10px; left: 20px; right: 30px;">
-                            <input type="text" placeholder="Send Message" id="messageInput" class="w-100 rounded outline-indigo-600 p-2 text-gray-600 border-indigo-600 border-2 ">
-                            <button id="sendButton" class="p-2 text-white font-bold rounded-full d-flex justify-content-center align-items-center"><img src="assets/icons/send-message-icon.svg" class="pe-2 text-white">Send</button>
+                            <input type="text" placeholder="Send Message" id="input-box" class="w-100 rounded outline-indigo-600 p-2 text-gray-600 border-indigo-600 border-2 ">
+                            <button id="submitBtn" class="p-2 text-white font-bold rounded-full d-flex justify-content-center align-items-center"><img src="assets/icons/send-message-icon.svg" class="pe-2 text-white">Send</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+           
+        </div>
 
     </body>
     <script src="index.js"></script>
+    <script>
+        let inputBox =  document.getElementById("input-box");
+let MyData = document.getElementById("mydata");
+document.getElementById("submitBtn").addEventListener("click", ()=>{
+    if(inputBox.value ==""){
+        alert("Enter Your Task");
+    }
+    else{
+        let list = document.createElement("li");
+        list.innerHTML = `${inputBox.value}` ;
+        MyData.appendChild(list);
+        inputBox.value="";
+        list.querySelector('span').addEventListener("click", remove);
+
+        //     function remove(){
+        //         alert("Are U Sure delete");
+        //         list.remove()
+        //     }   
+        // list.addEventListener("click",()=>{
+        //     if(list.classList.contains("underline")){
+        //         list.classList.remove("underline");
+        //     }
+        //    else{
+        //     list.classList.add("underline");
+        //    }
+        
+        // })
+     
+    }
+
+})
+    </script>
     </html>
