@@ -1,0 +1,12 @@
+.bg-slate-910{
+  background-color: rgba(0, 0, 0, 0.413);
+}
+li:hover, .hover-text-black:hover{
+  color: black !important;
+}
+.selected{
+  background-color: green;
+}
+.font-f{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
