@@ -2,7 +2,7 @@ const cardId01 = document.getElementById("card-id-01");
 cardId01.innerHTML = `  <div class="card p-3">
 <h3 class="font-bold font-sens"> Setup Workspace</h3>
 <label for="" class="font-bold">Workspace name*</label>
-<input type="text" placeholder="My Workspace" class="p-2 border-green-10     rounded outline-none"><br>
+<input type="text" placeholder="My Workspace" class="p-2 border-green-10     rounded outline-none" id="firstInput"><br>
 <label for="" class="font-bold">Select Your Industry</label>
 <select class="custom-select  p-2 border-green-10 rounded outline-none">
 <option>Select Your Industry</option>
@@ -29,7 +29,7 @@ cardId01.innerHTML = `  <div class="card p-3">
     <span class="font-bold">Milesh Kumar</span>
     <span class="text-gray-500">mk.name@gmail.com</span>
   </div>
- <span class="p-2 text-end w-100"><i class="bi bi-arrow-down-circle cursor-pointer fs-3"></i></span>
+ <span class="p-2 text-end w-100"><i class="bi bi-arrow-down-circle cursor-pointer fs-3" id="iconSec"></i></span>
 </div>
 <br>
 <button class="bg-green-400 p-2 w-100 rounded font-bold">Setup Workspace</button>
@@ -54,6 +54,7 @@ cardId02.innerHTML = `
 
 </ul>
 </div>`
+const firstInput = document.getElementById('firstInput');
 const inputBox = document.getElementById('inputBox');
 let MyData = document.getElementById("mydata");
 const btn = document.getElementById('btn').addEventListener('click', () =>{
@@ -62,9 +63,16 @@ const btn = document.getElementById('btn').addEventListener('click', () =>{
     }
     else{
         let list = document.createElement("li");
-        list.innerHTML = `${inputBox.value} <span class="p-2 text-end w-100"><i class="bi bi-arrow-down-circle cursor-pointer fs-5"></i></span>` ;
-        list.classList.add("d-flex","justify-content-around","align-items-center");
+        list.classList.add("d-flex","justify-content-around","align-items-center","font-bold");
+        // span1.innerHTML = `${firstInput.value}`
+        list.innerHTML = `${firstInput.value} <br> ${inputBox.value}  <span class="p-2 text-end w-100"><i class="bi bi-arrow-down-circle cursor-pointer fs-5" id="iconClick"></i></span>` ;
         MyData.appendChild(list);
+        const iconSec = document.getElementById("iconSec").addEventListener("click", () =>{
+          alert("Sorry This function Not Work Currently !")
+        })
+        const iconClick = document.getElementById("iconClick").addEventListener('click',() =>{
+          alert("Sorry This function Not Work Currently");
+        })
         inputBox.value="";
     }
 });
