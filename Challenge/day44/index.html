@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown Timer</title>
+</head>
+<body>
+<div id="countdown"></div>
+
+<script>
+// Set the launch date and time
+const launchDate = new Date('2024-04-05T00:00:00').getTime();
+
+// Update the countdown every second
+const timer = setInterval(function() {
+  // Get the current date and time
+  const now = new Date().getTime();
+
+  // Calculate the time remaining until launch
+  const timeRemaining = launchDate - now;
+
+  // Calculate days, hours, minutes, and seconds
+  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+  // Display the countdown
+  document.getElementById('countdown').innerHTML = `
+    <p>Launch in: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds</p>
+  `;
+
+  // If the countdown is over, stop the timer
+  if (timeRemaining <= 0) {
+    clearInterval(timer);
+    document.getElementById('countdown').innerHTML = '<p>Launch time has arrived!</p>';
+  }
+}, 1000); // Update every second
+</script>
+</body>
+</html>
