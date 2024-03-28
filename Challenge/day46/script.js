@@ -97,7 +97,7 @@ function renderCustomers() {
               </td>
               <td class="px-4 py-2">${customer.createdDate}</td>
               <td class="px-4 py-2">
-                  <i class="fa-solid fa-ellipsis cursor-pointer"></i>            
+                  <i class="bi bi-three-dots cursor-pointer"></i>
               </td>
           `;
         customerList.appendChild(row);
