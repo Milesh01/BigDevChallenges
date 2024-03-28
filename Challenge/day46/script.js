@@ -1,4 +1,4 @@
-// =========================create table dynamic======
+// =========================createTableDynamic======
 const customerData = [{
     name: 'John Doe',
     email: 'john.doe@gmail.com',
