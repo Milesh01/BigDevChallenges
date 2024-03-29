@@ -1,3 +1,47 @@
+const imgFormat = document.getElementById('imgFormat');
+imgFormat.innerHTML = `
+<div class="card p-2 border-2 bg-dark text-white">
+<h4>Export File</h4>
+<hr>
+<div class="">
+<h5>Format</h5>
+<div class="flex justify-between aligns-end">
+    <span class="bg-gray-600 py-1 px-2 rounded">JPG</span>
+    <input type="radio" class="cursor-pointer w-4" name="format" value="JPG">
+</div>
+<div class="flex justify-between aligns-end mt-2">
+    <span class="bg-gray-600 py-1 px-2 rounded">PNG</span>
+    <input type="radio" class="cursor-pointer w-4" name="format" value="PNG">
+</div>
+<div class="flex justify-between aligns-end mt-2">
+    <span class="bg-gray-600 py-1 px-2 rounded">TIFF</span>
+    <input type="radio" class="cursor-pointer w-4" name="format" value="TIFF">
+</div>
+<div class="flex justify-between aligns-end mt-2">
+    <span class="bg-gray-600 py-1 px-2 rounded">GIF</span>
+    <input type="radio" class="cursor-pointer w-4 text-gray-400" name="format" value="GIF">
+</div>
+</div>
+<hr>
+<div class="">
+<h5>Photo Quality</h5>
+<input type="range" class="w-100 bg-yellow-500 text-yellow-500 " value="80" id="qualityRange" min="0" max="100" width="100%" style="background-color: yellow !important; color: red">
+</div>
+<div class="flex justify-between aligns-end my-4 ">
+<h5>Size</h5>
+<select class="bg-gray-600 py-1 px-2 rounded cursor-pointer" id="sizeSelect">
+    <option class="hover:bg-yellow-500" value="1x">1x</option>
+    <option class="hover:bg-yellow-500" value="2x">2x</option>
+    <option class="hover:bg-yellow-500" value="3x">3x</option>
+    <option class="hover:bg-yellow-500" value="4x">4x</option>
+</select>
+</div>
+<div class="">
+<input type="button" class="py-2 w-100 bg-yellow-500 rounded text-black fw-bold" value="Export File" onclick="exportFile()">
+</div>
+</div>
+`;
+
 function exportFile() {
     var msg = document.getElementById('message');
     var format = document.querySelector('input[name="format"]:checked').value;
