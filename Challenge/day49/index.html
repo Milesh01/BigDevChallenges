@@ -1,0 +1,60 @@
+<html>
+
+    <head>
+        <!-- Our unique tag to identify the solution -->
+        <bds />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>49/100days</title>
+
+        <!-- TailwindCSS for styling. Feel free to integrate other libraries as needed -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Add your external script links here, if any -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    </head>
+   <style>
+    .active.main-box{
+        width: 100px;
+    }
+    .active.sm-none{
+        display: none;
+    }
+     .main-box{
+       width: 280px; 
+    }
+   </style>
+  <body>
+    <div class="container-fluid bg-violet-700">
+        <div class="row h-100 d-flex justify-content-center align-items-center">
+            <div class=" main-box">
+                <div class="card p-2 bg-dark text-white relative">
+                   <div class="d-flex align-items-center">
+                    <img src="https://images.pexels.com/photos/15239/flower-roses-red-roses-bloom.jpg?cs=srgb&dl=pexels-pixabay-15239.jpg&fm=jpg" class="h-9 w-9 me-3 rounded-full">
+                    <span class=" sm-none text-2xl font-bold">Rose Way</span>
+                   </div>
+                   <span class="absolute h-9 w-9 bg-dark rounded-full d-flex align-items-center justify-content-center cursor-pointer" style="right: -18px;" id="icon"><i class="bi bi-list"></i></span>
+                   <div class="mt-2" id="listView"></div>
+                   <hr>
+                   <div class="">
+                    <div class="hover:bg-red-400 cursor-pointer rounded p-2 d-flex align-items-center">
+                        <img src="https://avatars.githubusercontent.com/u/152176996?v=4" class="h-9 w-9 rounded-full mr-2">
+                        <span class=" sm-none font-bold">Milesh Kumar</span>
+                    </div>
+                    <div class="hover:bg-red-400 cursor-pointer rounded p-2 d-flex align-items-center">
+                        <span class="mr-2"><i class="bi bi-bell-fill"></i></span>
+                        <span class=" sm-none font-bold">Notification</span>
+                    </div>
+                    <div class="bg-cyan-300 cursor-pointer rounded text-center my-2">
+                        <span class="font-bold text-2xl">90 Days Left</span>    <br>
+                        <span class="text-black font-bold">Select your Plan</span>
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
