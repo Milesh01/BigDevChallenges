@@ -1,9 +1,13 @@
 <html>
+
     <head>
+        <!-- Our unique tag to identify the solution -->
         <bds />
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>50/100days</title>
+
+        <!-- TailwindCSS for styling. Feel free to integrate other libraries as needed -->
         <script src="https://cdn.tailwindcss.com"></script>
 
         <!-- Add your external script links here, if any -->
@@ -17,24 +21,11 @@
             <div class="col-md-4">
                 <div class="card p-2">
                     <div class="p-2 mb-3">
-                        <h4>Padding Invitation</h4>
-                        <span id="user">3 </span>friends user request
+                        <h4 class="font-bold">Padding Invitation</h4>
+                        <span id="userid" class="font-bold">4</span>
                     </div>
-                    <div class="d-flex align-items-center justify-content-between border-1 border-dark rounded p-2">
-                        <div class="d-flex align-items-center justify-content-center">
-                        <img src="https://avatars.githubusercontent.com/u/152176996?v=4" class="w-14 h-14 rounded-full">
-                        <div class="ms-2">
-                            <h6>Johan Viksa</h6>
-                            3 mutual friends
-                        </div>
-                    </div>
-                        <div class="">
-                            <button type="button" class="btn"><i class="bi bi-x-lg"></i> Decline</button>
-                            <button type="button" class="rounded p-2 bg-emerald-400 text-black"><i class="bi bi-check-lg"></i> Confirm</button>
-                        </div>
-                    </div>
-                   <!-- <div class="mt-2" id="listView"></div> -->
-                   <hr>
+                   
+                   <div class="mt-2" id="listView"></div>
                 </div>
             </div>
         </div>
