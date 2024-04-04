@@ -46,8 +46,8 @@ viewData.forEach((val)=>{
                         </div>
                     </div>
                         <div class="">
-                            <button type="button" class="text-gray-500 font-medium decline-btn hover:bg-red-500 p-2 rounded transition-all"><i class="bi bi-x-lg"></i> Decline</button>
-                            <button type="button" class="confirm-btn font-medium rounded p-2 bg-emerald-400 text-black hover:bg-emerald-500 transition-all"><i class="bi bi-check-lg"></i> Confirm</button>
+                            <button type="button" class="text-gray-500 font-medium decline-btn hover:bg-red-500 p-2 rounded transition-all hover:text-black">${val.decline}</button>
+                            <button type="button" class="confirm-btn font-medium rounded p-2 bg-emerald-400 text-black hover:bg-emerald-500 transition-al ">${val.Accept}</button>
                         </div>
                     </div>`;
 listView.innerHTML = renderData
