@@ -1,13 +1,14 @@
     const viewData = [
     {
-        avatar : 'https://avatars.githubusercontent.com/u/152176996?v=4 ',
+        
+        avatar : 'https://i.pinimg.com/originals/f4/7a/11/f47a11f6f2fcd5cc64888d90637d45e5.gif ',
         Name : 'Mk Kwd',
         mFriends : '3 mutual friends',
         decline : '<i class="bi bi-x-lg"></i> Decline',
         Accept : '<i class="bi bi-check-lg"></i> Confirm'
     },
     {
-        avatar : 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fimages%2Fyoung-adult-boy-portrait%2F291346142&psig=AOvVaw1n5QoI07cMeWUCcXEW3G6-&ust=1712256826410000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLjioPHbpoUDFQAAAAAdAAAAABAEhttps://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fimages%2Fyoung-adult-boy-portrait%2F291346142&psig=AOvVaw1n5QoI07cMeWUCcXEW3G6-&ust=1712256826410000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLjioPHbpoUDFQAAAAAdAAAAABAEhttps://as2.ftcdn.net/v2/jpg/02/91/34/61/1000_F_291346142_LPJ1Qy1wBNg1zYxEzXUkphPi9j3pryn2.jpg',
+        avatar : 'https://avatars.githubusercontent.com/u/152176996?v=4 ',
         Name : 'Vijay kumar',
         mFriends : '1 mutual friends',
         decline : '<i class="bi bi-x-lg"></i> Decline',
@@ -36,17 +37,17 @@ var renderData = ''
 const listView = document.querySelector('#listView');
 viewData.forEach((val)=>{
     renderData += `
-    <div class="d-flex align-items-center justify-content-between border-1 border-dark rounded p-2 mt-2">
+    <div class="d-flex align-items-center justify-content-between border-2 rounded p-2 mt-2 hover:bg-slate-200">
                         <div class="d-flex align-items-center justify-content-center">
-                        <img src="${val.avatar}" class="w-14 h-14 rounded-full">
-                        <div class="ms-2">
+                        <img src="${val.avatar}" class="w-14 h-14 rounded-full object-cover">
+                        <div class="ms-2 d-mBlock">
                             <h6>${val.Name}</h6>
                             ${val.mFriends}
                         </div>
                     </div>
                         <div class="">
-                            <button type="button" class=" decline-btn hover:bg-red-500 p-2 rounded transition-all"><i class="bi bi-x-lg"></i> Decline</button>
-                            <button type="button" class="confirm-btn rounded p-2 bg-emerald-400 text-black hover:bg-emerald-500 transition-all"><i class="bi bi-check-lg"></i> Confirm</button>
+                            <button type="button" class="text-gray-500 font-medium decline-btn hover:bg-red-500 p-2 rounded transition-all"><i class="bi bi-x-lg"></i> Decline</button>
+                            <button type="button" class="confirm-btn font-medium rounded p-2 bg-emerald-400 text-black hover:bg-emerald-500 transition-all"><i class="bi bi-check-lg"></i> Confirm</button>
                         </div>
                     </div>`;
 listView.innerHTML = renderData
@@ -63,6 +64,7 @@ confirmButtons.forEach(button => {
 
 declineButtons.forEach(button => {
     button.addEventListener('click', () => {
+        alert('Are U Sure');
         button.parentNode.parentNode.remove(); // Remove the parent div
     });
 });
