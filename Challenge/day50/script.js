@@ -3,30 +3,34 @@
         
         avatar : 'https://i.pinimg.com/originals/f4/7a/11/f47a11f6f2fcd5cc64888d90637d45e5.gif ',
         Name : 'Mk Kwd',
-        mFriends : '3 mutual friends',
+        mFriends : '2 mutual friends',
         decline : '<i class="bi bi-x-lg"></i> Decline',
-        Accept : '<i class="bi bi-check-lg"></i> Confirm'
+        Accept : '<i class="bi bi-check-lg"></i> Confirm',
+        dmBlock: 'Usha sahu <br> Pooja'
     },
     {
         avatar : 'https://avatars.githubusercontent.com/u/152176996?v=4 ',
         Name : 'Vijay kumar',
         mFriends : '1 mutual friends',
         decline : '<i class="bi bi-x-lg"></i> Decline',
-        Accept : '<i class="bi bi-check-lg"></i> Confirm'
+        Accept : '<i class="bi bi-check-lg"></i> Confirm',
+        dmBlock: 'Kumkum'
     },
     {
         avatar : 'https://img.freepik.com/free-photo/model-cute-adult-portrait-urban_1139-817.jpg',
         Name : 'Sudha Sahu',
-        mFriends : '7 mutual friends',
+        mFriends : '1 mutual friends',
         decline : '<i class="bi bi-x-lg"></i> Decline',
-        Accept : '<i class="bi bi-check-lg"></i> Confirm'
+        Accept : '<i class="bi bi-check-lg"></i> Confirm',
+        dmBlock: 'Ninayak'
     },
     {
         avatar : 'https://c4.wallpaperflare.com/wallpaper/156/212/901/cute-girl-1920x1200-wallpaper-preview.jpg',
         Name : 'Priya',
-        mFriends : '3 mutual friends',
+        mFriends : '2 mutual friends',
         decline : '<i class="bi bi-x-lg"></i> Decline',
-        Accept : '<i class="bi bi-check-lg"></i> Confirm'
+        Accept : '<i class="bi bi-check-lg"></i> Confirm',
+        dmBlock: 'Suraj <br> Vikas'
     }
 ]
 
@@ -40,9 +44,12 @@ viewData.forEach((val)=>{
     <div class="d-flex align-items-center justify-content-between border-2 rounded p-2 mt-2 hover:bg-slate-200">
                         <div class="d-flex align-items-center justify-content-center">
                         <img src="${val.avatar}" class="w-14 h-14 rounded-full object-cover">
-                        <div class="ms-2 d-mBlock">
+                        <div class="ms-2 mutualF">
                             <h6>${val.Name}</h6>
                             ${val.mFriends}
+                            <div class="d-mBlock">
+                            ${val.dmBlock}
+                            </div>
                         </div>
                     </div>
                         <div class="">
