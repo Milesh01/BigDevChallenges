@@ -1,0 +1,78 @@
+<html>
+
+    <head>
+        <!-- Our unique tag to identify the solution -->
+        <bds />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>51/100days</title>
+
+        <!-- TailwindCSS for styling. Feel free to integrate other libraries as needed -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Add your external script links here, if any -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css"></style>
+    </head>
+
+  <body>
+    <div class="container p-5">
+        <div class="row h-100   ">
+            <div class="col-md-3">
+                <h1 class="font-bold mb-3 fs-3">Billing</h1>
+                <div class="card shadow-md">
+                   <ul>
+                    <li class="font-bold bg-purple-400 p-2 px-3 w-100 transition-all cursor-pointer" id="plan">Plan</li>
+                    <li class="font-bold hover:bg-purple-400 p-2 px-3 w-100 transition-all cursor-pointer" id="method02">Payment Method</li>
+                    <li class="text-gray-500 p-2 px-3 w-100">Billing History</li>
+                   </ul>
+                </div>
+            </div>
+            <div class="col-md-8" id="plan01">
+                <div class="card p-3 shadow-md">
+                    <div class="Card-plan">
+                        <span class="font-bold fs-4">Plan</span><br>
+                        <span>Deside what is best for you</span><br>
+                        <div class="row">
+                            <div class="col-md-6 mt-3">
+                                <div class="card p-3 bg-gray-100 h-100">
+                                    <div class="mb-4 d-flex justify-content-between align-items-center">
+                                        <span class="font-bold">Standerd</span>
+                                        <span><span class="font-bold">$29.99</span>/month</span>
+                                    </div>
+                                    <button type="button" class=" py-2 font-bold border-1 border-primary text-primary w-60 rounded mt-3">Cancel Subscription</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <div class="card p-3 bg-purple-600 h-100">
+                                    <div class="mb-4 d-flex justify-content-between align-items-center">
+                                        <span class="font-bold text-white">Ultimate</span>
+                                        <span class="text-white"><span class="font-bold">$49.99</span>/month</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <button type="button" class="px-4 py-2 font-bold hover:text-black bg-white text-purple-600 rounded mt-3">Upgrade</button>
+                                        <span class="ms-3 pt-2 text-white">Learn about more this plan</span>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Card-plan mt-3">
+                        <span class="font-bold fs-4">Payment Method</span><br>
+                        <span>Update your billing</span><br>
+                      <div id="method"></div>
+                    </div>
+                    <div class="Card-plan mt-3">
+                        <span class="font-bold fs-4">Billing History</span><br>
+                        <span>Access to all your previous invoice</span><br>
+                        <div id="table"></div>
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
