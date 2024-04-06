@@ -1,6 +1,6 @@
 const table =document.getElementById('table');
 table.innerHTML = `
-<table class="table table-hover mt-2">
+<table class="table table-hover mt-2 table-responsive">
 <thead class="table-active">
     <tr>
         <th scope="col">DATE</th>
@@ -54,7 +54,7 @@ const method = document.getElementById('method');
 method.innerHTML = `
 <div class="row">
 <div class="col-md-4 mt-3">
-    <div class="card h-100 p-3 bg-gray-100 ">
+    <div class="rounded h-100 p-3 bg-gray-100 ">
         <div class="d-flex justify-content-center align-items-center" style="height: 90px;">
             <span class="font-bold">**** **** **** 2362</span>
         </div>
