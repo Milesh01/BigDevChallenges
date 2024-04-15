@@ -1,4 +1,4 @@
-// ============================
+// ===============Active Class And And Remove=============
 document.addEventListener('DOMContentLoaded', function() {
     // Get all anchor elements within the list
     const menuItems = document.querySelectorAll('#nav-bar li a');
