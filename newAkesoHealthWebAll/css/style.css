@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --green: red;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+.top-header{
+    padding: 10px;
+    border-bottom: 1px solid #dadada;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header{
+    width: 100%;
+    padding: 10px;
+    background-color: #fdfdfd;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header .akesoLogo{
+    height: 110px;
+    width: 120px;
+}
+.header .akesoLogo img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.header .navigation-bar{
+    width: 70%;
+}
+.header .navigation-bar ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    
+}
+.header .navigation-bar ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    transition: all .3s ease-in-out;
+    position: relative;
+}
+.header .navigation-bar ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--green);
+    left: 0;
+    transition: all .3s ease-in-out;
+}
+.header .navigation-bar ul li a:hover::before{
+    content: '';
+    width: 100%;
+}
+.header .navigation-bar ul li a:hover{
+    color: var(--green);
+}
+.header .navigation-bar ul li a.active{
+    color: var(--green);
+}
